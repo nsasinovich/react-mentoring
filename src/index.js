@@ -1,6 +1,6 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./styles.scss";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './styles.scss';
 
 const HelloWorldFunctional = () => (
   <div>Hello World! by Functional Conponent</div>

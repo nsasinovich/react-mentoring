@@ -28,6 +28,11 @@ module.exports = {
         options: {
           name: "[path][name].[ext]?[hash]"
         }
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['babel-loader', 'eslint-loader']
       }
     ]
   },
@@ -49,5 +54,4 @@ module.exports = {
     compress: true,
     open: true
   },
-  mode: NODE_ENV,
 };

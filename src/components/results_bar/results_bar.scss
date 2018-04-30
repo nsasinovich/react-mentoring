@@ -1,0 +1,33 @@
+@import '../../styles/generic_styles.scss';
+
+$results-bar-height: 64px;
+
+.results-bar {
+    display: flex;
+    justify-content: space-between;
+    height: $results-bar-height;
+    padding: 10px $search-header-hpadding;
+    box-sizing: border-box;
+    background-color: $light-grey;
+    font-size: 14px;
+    font-weight: bold;
+
+    .results-sorting {
+        display: flex;
+
+        .sorting-options {
+            display: flex;
+            list-style: none;
+            margin: 0 0 0 15px;
+            padding: 0;
+
+            li {
+                margin-left: 15px;
+            }
+
+            .selected {
+                color: $red;
+            }
+        }
+    }
+}

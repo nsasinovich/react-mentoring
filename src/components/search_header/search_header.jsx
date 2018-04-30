@@ -8,13 +8,14 @@ import './search_header.scss';
 
 const FIND_MOVIE_MESSAGE = 'Find your movie';
 const SEARCH_BUTTON_MESSAGE = 'Search';
+const SEARCH_BY_MESSAGE = 'Search by';
 
 export default class SearchHeader extends React.Component {
     render() {
         const searchActions = (
             <div className="button-group">
                 <div className="filter-buttons">
-                    <p className="search-by">SEARCH BY</p>
+                    <p className="search-by">{SEARCH_BY_MESSAGE}</p>
                     <Button buttonClass="filter-button button-red">{FilterOptions.GENRE}</Button>
                     <Button buttonClass="filter-button button-grey">{FilterOptions.TITLE}</Button>
                 </div>

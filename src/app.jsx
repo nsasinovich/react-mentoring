@@ -5,6 +5,7 @@ import AssetTile from './components/asset_tile/asset_tile';
 import NoResults from './components/no_results/no_results';
 import SearchHeader from './components/search_header/search_header';
 import ResultsBar from './components/results_bar/results_bar';
+import AssetDetails from './components/asset_details/asset_details';
 
 export default class App extends React.Component {
     render() {
@@ -12,6 +13,7 @@ export default class App extends React.Component {
             <div className="app">
                 <SearchHeader />
                 <ResultsBar count={3} />
+                <AssetDetails />
                 <Footer />
                 <NoResults />
                 <AssetTile />

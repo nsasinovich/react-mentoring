@@ -1,8 +1,8 @@
 import React from 'react';
 import './app.scss';
 import Footer from './components/footer/footer';
-import { PosterSizes, FilterOptions } from './constants/app_constants';
-import Poster from './components/shared/poster/poster';
+import { FilterOptions } from './constants/app_constants';
+import AssetTile from './components/asset_tile/asset_tile';
 import Button from './components/shared/button/button';
 
 export default class App extends React.Component {
@@ -15,7 +15,7 @@ export default class App extends React.Component {
                 <Button buttonClass='filter-button button-unselected'>{FilterOptions.TITLE}</Button>
                 <Button buttonClass='search-button button-selected'>Search</Button>
 
-                <Poster posterSize={PosterSizes.MEDIUM} imgUrl='https://cdn.miramax.com/media/assets/Pulp-Fiction1.png'/>
+                <AssetTile />
             </div>
         );
     }

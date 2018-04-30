@@ -1,0 +1,26 @@
+@import '../../../styles/generic_styles.scss';
+
+.button {
+    color: $white;
+    border: none;
+    border-radius: 2px;
+    text-transform: uppercase; 
+}
+
+.button-selected {
+    background-color: $red;
+}
+
+.button-unselected {
+    background-color: $grey;
+}
+
+.filter-button {
+    padding: 4px 18px;
+    font-size: 14px;
+}
+
+.search-button {
+    font-size: 16px;
+    padding: 6px 40px;
+}

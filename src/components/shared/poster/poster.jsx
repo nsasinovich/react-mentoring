@@ -16,6 +16,6 @@ export default class Poster extends React.Component {
 }
 
 Poster.propTypes = {
-    posterSize: PropTypes.string.isRequired,
-    imgUrl: PropTypes.string.isRequired,
+    posterSize: PropTypes.string,
+    imgUrl: PropTypes.string,
 };

@@ -13,11 +13,11 @@ $poster-medium-height: 250px;
 }
 
 .poster-large {
-    width: 300px;
-    height: 350px;
+    width: $poster-large-width;
+    height: $poster-large-height;
 }
 
 .poster-medium {
-    width: 150px;
-    height: 250px;
+    width: $poster-medium-width;
+    height: $poster-medium-height;
 }

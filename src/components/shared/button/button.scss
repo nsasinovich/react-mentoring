@@ -7,20 +7,20 @@
     text-transform: uppercase; 
 }
 
-.button-selected {
+.button-red {
     background-color: $red;
 }
 
-.button-unselected {
+.button-grey {
     background-color: $grey;
 }
 
 .filter-button {
-    padding: 4px 18px;
+    padding: 4px 20px;
     font-size: 14px;
 }
 
 .search-button {
     font-size: 16px;
-    padding: 6px 40px;
+    padding: 6px 50px;
 }

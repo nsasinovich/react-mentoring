@@ -18,6 +18,7 @@
     .button-group {
         margin-top: 12px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: baseline;
 

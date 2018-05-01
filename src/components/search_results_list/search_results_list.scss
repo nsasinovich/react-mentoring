@@ -1,0 +1,9 @@
+.search-results-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+
+    .asset-tile {
+        margin: 20px 22px;
+    }
+}

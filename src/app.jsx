@@ -1,11 +1,12 @@
 import React from 'react';
 import './app.scss';
 import Footer from './components/footer/footer';
-import AssetTile from './components/asset_tile/asset_tile';
-import NoResults from './components/no_results/no_results';
 import SearchHeader from './components/search_header/search_header';
 import ResultsBar from './components/results_bar/results_bar';
-import AssetDetails from './components/asset_details/asset_details';
+import SearchResultsList from './components/search_results_list/search_results_list';
+
+// import NoResults from './components/no_results/no_results';
+// import AssetDetails from './components/asset_details/asset_details';
 
 export default class App extends React.Component {
     render() {
@@ -13,10 +14,10 @@ export default class App extends React.Component {
             <div className="app">
                 <SearchHeader />
                 <ResultsBar count={3} />
-                <AssetDetails />
+                <SearchResultsList />
                 <Footer />
-                <NoResults />
-                <AssetTile />
+                {/* <AssetDetails /> */}
+                {/* <NoResults /> */}
             </div>
         );
     }

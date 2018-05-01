@@ -12,9 +12,12 @@ export default class App extends React.Component {
     render() {
         return (
             <div className="app">
-                <SearchHeader />
-                <ResultsBar count={3} />
-                <SearchResultsList />
+                <div className="content-wrapper">
+                    <SearchHeader />
+                    <ResultsBar count={3} />
+                    <SearchResultsList />
+                </div>
+
                 <Footer />
                 {/* <AssetDetails /> */}
                 {/* <NoResults /> */}

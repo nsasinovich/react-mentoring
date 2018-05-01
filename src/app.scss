@@ -1,4 +1,10 @@
 @import './styles/generic_styles.scss';
+html,
+body,
+.app {
+    height: 100%;
+    margin: 0;
+}
 
 body {
     word-wrap: break-word;
@@ -6,7 +12,18 @@ body {
     margin: 0;
 }
 
+.content-wrapper {
+    box-sizing: border-box;
+    min-height: 100%;
+    padding-bottom: $footer-height; /* equals to footer height */
+}
+
 .app {
     max-width: $content-width;
     margin: 0 auto;
+}
+
+.footer {
+    height: $footer-height;
+    margin-top: -$footer-height;
 }

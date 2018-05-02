@@ -5,35 +5,34 @@ import Poster from '../../components/shared/poster/poster';
 
 import './asset_tile.scss';
 
-export default class AssetTile extends React.Component {
-    render() {
-        const {
-            posterUrl,
-            year,
-            title,
-            genre,
-        } = this.props;
+const AssetTile = (props) => {
+    const {
+        posterUrl,
+        year,
+        title,
+        genre,
+    } = props;
 
-        const poster = <Poster posterSize={PosterSizes.MEDIUM} imgUrl={posterUrl} />;
+    const poster = <Poster posterSize={PosterSizes.MEDIUM} imgUrl={posterUrl} />;
 
-        const info = (
-            <div className="asset-info">
-                <div>
-                    <p className="title">{title}</p>
-                    <p className="genre">{genre}</p>
-                </div>
-                <p className="year">{year}</p>
+    const info = (
+        <div className="asset-info">
+            <div>
+                <p className="title">{title}</p>
+                <p className="genre">{genre}</p>
             </div>
-        );
+            <p className="year">{year}</p>
+        </div>
+    );
 
-        return (
-            <div className='asset-tile'>
-                {poster}
-                {info}
-            </div>
-        );
-    }
-}
+    return (
+        <div className='asset-tile'>
+            {poster}
+            {info}
+        </div>
+    );
+};
+
 
 AssetTile.propTypes = {
     posterUrl: PropTypes.string,
@@ -49,3 +48,5 @@ AssetTile.defaultProps = {
     title: 'Pulp Fiction',
     genre: 'Oscar-winning movies',
 };
+
+export default AssetTile;

@@ -4,8 +4,6 @@ import './no_results.scss';
 
 const NO_RESULTS_MESSAGE = 'No films found';
 
-export default function NoResults() {
-    return (
-        <h3 className="empty-page">{NO_RESULTS_MESSAGE}</h3>
-    );
-}
+const NoResults = () => <h3 className="empty-page">{NO_RESULTS_MESSAGE}</h3>;
+
+export default NoResults;

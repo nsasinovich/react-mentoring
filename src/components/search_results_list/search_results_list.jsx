@@ -6,43 +6,28 @@ import SearchResultsErrorBoundary from './search_results_error_boundary/search_r
 
 import './search_results_list.scss';
 
-const resultAssets = [
-    { title: 'Asset 1' },
-    { title: 'Asset 2' },
-    { title: 'Asset 3' },
-    { title: 'Asset 4' },
-    { title: 'Asset 5' },
-    { title: 'Asset 6' },
-    { title: 'Asset 7' },
-    { title: 'Asset 8' },
-    { title: 'Asset 9' },
-];
+const SearchResultsList = ({ results }) => {
+    const children = results.length ? results.map(asset => (
+        <AssetTile
+            key={asset.title}
+            title={asset.title}
+            posterUrl={asset.posterUrl}
+            year={asset.year}
+            genre={asset.genre}
+        />
+    )) : <NoResults />;
 
-export default class SearchResultsList extends React.Component {
-    render() {
-        const assets = this.props.results || resultAssets;
-
-        const children = assets.length ? assets.map(asset => (
-            <AssetTile
-                key={asset.title}
-                title={asset.title}
-                posterUrl={asset.posterUrl}
-                year={asset.year}
-                genre={asset.genre}
-            />
-        )) : <NoResults />;
-
-        return (
-            <SearchResultsErrorBoundary>
-                <div className="search-results-list">
-                    {children}
-                </div>
-            </SearchResultsErrorBoundary>
-        );
-    }
-}
+    return (
+        <SearchResultsErrorBoundary>
+            <div className="search-results-list">
+                {children}
+            </div>
+        </SearchResultsErrorBoundary>
+    );
+};
 
 SearchResultsList.propTypes = {
     results: PropTypes.array,
 };
 
+export default SearchResultsList;

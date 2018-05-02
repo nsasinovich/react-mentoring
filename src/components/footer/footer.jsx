@@ -2,10 +2,10 @@ import React from 'react';
 import Logo from '../shared/logo/logo';
 import './footer.scss';
 
-export default function Footer() {
-    return (
-        <div className="footer">
-            <Logo />
-        </div>
-    );
-}
+const Footer = () => (
+    <div className="footer">
+        <Logo />
+    </div>
+);
+
+export default Footer;

@@ -3,8 +3,6 @@ import SearchHeader from '../search_header/search_header';
 import ResultsBar from '../results_bar/results_bar';
 import SearchResultsList from '../search_results_list/search_results_list';
 
-import './search_container.scss';
-
 const resultAssets = [
     { title: 'Asset 1' },
     { title: 'Asset 2' },

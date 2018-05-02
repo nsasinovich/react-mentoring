@@ -3,8 +3,6 @@ import './logo.scss';
 
 const LOGO_TITLE = 'netflixroulette';
 
-export default function Logo() {
-    return (
-        <p className="logo">{LOGO_TITLE}</p>
-    );
-}
+const Logo = () => <p className="logo">{LOGO_TITLE}</p>;
+
+export default Logo;

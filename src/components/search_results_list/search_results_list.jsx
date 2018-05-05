@@ -6,8 +6,10 @@ import SearchResultsErrorBoundary from './search_results_error_boundary/search_r
 
 import './search_results_list.scss';
 
-const SearchResultsList = ({ results }) => {
-    const children = results.length ? results.map(asset => (
+const SearchResultsList = ({ results, sortField }) => {
+    const sortedResults = results.sort((res1, res2) => res2[sortField] - res1[sortField]);
+
+    const children = sortedResults.length ? sortedResults.map(asset => (
         <AssetTile
             key={asset.title}
             title={asset.title}
@@ -28,6 +30,7 @@ const SearchResultsList = ({ results }) => {
 
 SearchResultsList.propTypes = {
     results: PropTypes.array,
+    sortField: PropTypes.string,
 };
 
 export default SearchResultsList;

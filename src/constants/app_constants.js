@@ -9,6 +9,12 @@ export const FilterOptions = {
 };
 
 export const SortingOptions = {
-    RELEASE: 'release date',
-    RATING: 'rating',
+    RELEASE: {
+        name: 'release date',
+        sortingField: 'year',
+    },
+    RATING: {
+        name: 'rating',
+        sortingField: 'rating',
+    },
 };

@@ -1,0 +1,10 @@
+@import '../../styles/generic_styles.scss';
+
+.footer {
+    width: 100%;
+    height: $footer-height;
+    padding-top: $footer-padding-top;
+    padding-left: $content-padding;
+    box-sizing: border-box;
+    background-color: $dark-grey;
+}

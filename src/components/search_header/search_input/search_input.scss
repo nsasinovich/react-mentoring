@@ -1,0 +1,31 @@
+@import '../../../styles/generic_styles.scss';
+
+$search-input-padding: 15px;
+
+.search-input-wrapper {
+    position: relative;
+
+    .search-input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: $search-input-padding;
+        background-color: $black;
+        color: $white;
+        border: none;
+        border-radius: 2px;
+        border-bottom: 2px solid $red;
+        font-size: 18px;
+    }
+
+    .search-input:focus {
+        outline: none;
+    }
+
+    img {
+        position: absolute;
+        top: $search-input-padding;
+        right: $search-input-padding;
+        height: 20px;
+        width: 20px;
+    }
+}

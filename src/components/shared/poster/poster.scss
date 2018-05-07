@@ -1,0 +1,20 @@
+@import '../../../styles/generic_styles.scss';
+
+.poster {
+    display: inline-block;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.poster-large {
+    width: $poster-large-width;
+    height: $poster-large-height;
+}
+
+.poster-medium {
+    width: $poster-medium-width;
+    height: $poster-medium-height;
+}

@@ -30,7 +30,11 @@ const SearchResultsList = ({ results, sortField }) => {
 
 SearchResultsList.propTypes = {
     results: PropTypes.array,
-    sortField: PropTypes.string,
+    sortField: PropTypes.string.isRequired,
+};
+
+SearchResultsList.defaultProps = {
+    results: [],
 };
 
 export default SearchResultsList;

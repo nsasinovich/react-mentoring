@@ -62,12 +62,11 @@ AssetDetails.propTypes = {
     genre: PropTypes.string,
     year: PropTypes.number,
     duration: PropTypes.number,
-    description: PropTypes.String,
+    description: PropTypes.string,
 };
 
 // will be removed later
 AssetDetails.defaultProps = {
-    posterUrl: 'https://cdn.miramax.com/media/assets/Pulp-Fiction1.png',
     title: 'Pulp Fiction',
     rating: 4.7,
     genre: 'Oscar-winning Movies',

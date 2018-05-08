@@ -1,3 +1,5 @@
 /node_modules
 /public
+/test/coverage
+/test/unit/__snapshots__
 .DS_Store

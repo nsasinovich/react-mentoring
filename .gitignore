@@ -2,4 +2,5 @@
 /public
 /test/coverage
 /test/unit/__snapshots__
+/test/e2e-reports
 .DS_Store

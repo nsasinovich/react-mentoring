@@ -1,0 +1,560 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchResultsList /> should render AssetTiles if results are passed 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SearchResultsList
+    results={
+      Array [
+        Object {
+          "rating": 5,
+          "title": "Asset 5",
+          "year": 1988,
+        },
+        Object {
+          "rating": 4,
+          "title": "Asset 4",
+          "year": 1989,
+        },
+        Object {
+          "rating": 3.55,
+          "title": "Asset 3",
+          "year": 1993,
+        },
+        Object {
+          "rating": 3.53,
+          "title": "Asset 2",
+          "year": 1994,
+        },
+        Object {
+          "rating": 1,
+          "title": "Asset 1",
+          "year": 1995,
+        },
+      ]
+    }
+    sortField="rating"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": <div
+        className="search-results-list"
+      >
+        <AssetTile
+          genre="Oscar-winning movies"
+          posterUrl={undefined}
+          title="Asset 5"
+          year={1988}
+        />
+        <AssetTile
+          genre="Oscar-winning movies"
+          posterUrl={undefined}
+          title="Asset 4"
+          year={1989}
+        />
+        <AssetTile
+          genre="Oscar-winning movies"
+          posterUrl={undefined}
+          title="Asset 3"
+          year={1993}
+        />
+        <AssetTile
+          genre="Oscar-winning movies"
+          posterUrl={undefined}
+          title="Asset 2"
+          year={1994}
+        />
+        <AssetTile
+          genre="Oscar-winning movies"
+          posterUrl={undefined}
+          title="Asset 1"
+          year={1995}
+        />
+      </div>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <AssetTile
+            genre="Oscar-winning movies"
+            posterUrl={undefined}
+            title="Asset 5"
+            year={1988}
+          />,
+          <AssetTile
+            genre="Oscar-winning movies"
+            posterUrl={undefined}
+            title="Asset 4"
+            year={1989}
+          />,
+          <AssetTile
+            genre="Oscar-winning movies"
+            posterUrl={undefined}
+            title="Asset 3"
+            year={1993}
+          />,
+          <AssetTile
+            genre="Oscar-winning movies"
+            posterUrl={undefined}
+            title="Asset 2"
+            year={1994}
+          />,
+          <AssetTile
+            genre="Oscar-winning movies"
+            posterUrl={undefined}
+            title="Asset 1"
+            year={1995}
+          />,
+        ],
+        "className": "search-results-list",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "Asset 5",
+          "nodeType": "function",
+          "props": Object {
+            "genre": "Oscar-winning movies",
+            "posterUrl": undefined,
+            "title": "Asset 5",
+            "year": 1988,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "Asset 4",
+          "nodeType": "function",
+          "props": Object {
+            "genre": "Oscar-winning movies",
+            "posterUrl": undefined,
+            "title": "Asset 4",
+            "year": 1989,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "Asset 3",
+          "nodeType": "function",
+          "props": Object {
+            "genre": "Oscar-winning movies",
+            "posterUrl": undefined,
+            "title": "Asset 3",
+            "year": 1993,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "Asset 2",
+          "nodeType": "function",
+          "props": Object {
+            "genre": "Oscar-winning movies",
+            "posterUrl": undefined,
+            "title": "Asset 2",
+            "year": 1994,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "Asset 1",
+          "nodeType": "function",
+          "props": Object {
+            "genre": "Oscar-winning movies",
+            "posterUrl": undefined,
+            "title": "Asset 1",
+            "year": 1995,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <div
+          className="search-results-list"
+        >
+          <AssetTile
+            genre="Oscar-winning movies"
+            posterUrl={undefined}
+            title="Asset 5"
+            year={1988}
+          />
+          <AssetTile
+            genre="Oscar-winning movies"
+            posterUrl={undefined}
+            title="Asset 4"
+            year={1989}
+          />
+          <AssetTile
+            genre="Oscar-winning movies"
+            posterUrl={undefined}
+            title="Asset 3"
+            year={1993}
+          />
+          <AssetTile
+            genre="Oscar-winning movies"
+            posterUrl={undefined}
+            title="Asset 2"
+            year={1994}
+          />
+          <AssetTile
+            genre="Oscar-winning movies"
+            posterUrl={undefined}
+            title="Asset 1"
+            year={1995}
+          />
+        </div>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <AssetTile
+              genre="Oscar-winning movies"
+              posterUrl={undefined}
+              title="Asset 5"
+              year={1988}
+            />,
+            <AssetTile
+              genre="Oscar-winning movies"
+              posterUrl={undefined}
+              title="Asset 4"
+              year={1989}
+            />,
+            <AssetTile
+              genre="Oscar-winning movies"
+              posterUrl={undefined}
+              title="Asset 3"
+              year={1993}
+            />,
+            <AssetTile
+              genre="Oscar-winning movies"
+              posterUrl={undefined}
+              title="Asset 2"
+              year={1994}
+            />,
+            <AssetTile
+              genre="Oscar-winning movies"
+              posterUrl={undefined}
+              title="Asset 1"
+              year={1995}
+            />,
+          ],
+          "className": "search-results-list",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "Asset 5",
+            "nodeType": "function",
+            "props": Object {
+              "genre": "Oscar-winning movies",
+              "posterUrl": undefined,
+              "title": "Asset 5",
+              "year": 1988,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "Asset 4",
+            "nodeType": "function",
+            "props": Object {
+              "genre": "Oscar-winning movies",
+              "posterUrl": undefined,
+              "title": "Asset 4",
+              "year": 1989,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "Asset 3",
+            "nodeType": "function",
+            "props": Object {
+              "genre": "Oscar-winning movies",
+              "posterUrl": undefined,
+              "title": "Asset 3",
+              "year": 1993,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "Asset 2",
+            "nodeType": "function",
+            "props": Object {
+              "genre": "Oscar-winning movies",
+              "posterUrl": undefined,
+              "title": "Asset 2",
+              "year": 1994,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "Asset 1",
+            "nodeType": "function",
+            "props": Object {
+              "genre": "Oscar-winning movies",
+              "posterUrl": undefined,
+              "title": "Asset 1",
+              "year": 1995,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`<SearchResultsList /> should render NoResults if results array is empty 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SearchResultsList
+    results={Array []}
+    sortField="rating"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": <div
+        className="search-results-list"
+      >
+        <NoResults />
+      </div>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <NoResults />,
+        "className": "search-results-list",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <div
+          className="search-results-list"
+        >
+          <NoResults />
+        </div>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <NoResults />,
+          "className": "search-results-list",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`<SearchResultsList /> should render SearchResultsList and match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SearchResultsList
+    results={Array []}
+    sortField="rating"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": <div
+        className="search-results-list"
+      >
+        <NoResults />
+      </div>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <NoResults />,
+        "className": "search-results-list",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <div
+          className="search-results-list"
+        >
+          <NoResults />
+        </div>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <NoResults />,
+          "className": "search-results-list",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

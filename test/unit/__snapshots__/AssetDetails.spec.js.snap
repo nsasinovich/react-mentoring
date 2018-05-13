@@ -1,0 +1,1523 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AssetDetails /> should contain large Poster 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <AssetDetails
+    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    duration={113}
+    genre="Oscar-winning Movies"
+    rating={4.7}
+    title="Pulp Fiction"
+    year={1995}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="asset-details-header"
+        >
+          <Logo
+            className="asset-details-logo"
+          />
+          <Button
+            buttonClass="search-button button-white"
+          >
+            Search
+          </Button>
+        </div>,
+        <div
+          className="asset-details"
+        >
+          <Poster
+            imgUrl="test-file-stub"
+            posterSize="poster-large"
+          />
+          <div
+            className="asset-info"
+          >
+            <div
+              className="wrapper"
+            >
+              <p
+                className="title"
+              >
+                Pulp Fiction
+              </p>
+              <p
+                className="rating"
+              >
+                4.7
+              </p>
+            </div>
+            <p
+              className="genre"
+            >
+              Oscar-winning Movies
+            </p>
+            <div
+              className="wrapper"
+            >
+              <p
+                className="year"
+              >
+                1995
+              </p>
+              <p
+                className="duration"
+              >
+                113 min
+              </p>
+            </div>
+            <p
+              className="description"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>,
+      ],
+      "className": "asset-details-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Logo
+              className="asset-details-logo"
+            />,
+            <Button
+              buttonClass="search-button button-white"
+            >
+              Search
+            </Button>,
+          ],
+          "className": "asset-details-header",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "className": "asset-details-logo",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "buttonClass": "search-button button-white",
+              "children": "Search",
+            },
+            "ref": null,
+            "rendered": "Search",
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Poster
+              imgUrl="test-file-stub"
+              posterSize="poster-large"
+            />,
+            <div
+              className="asset-info"
+            >
+              <div
+                className="wrapper"
+              >
+                <p
+                  className="title"
+                >
+                  Pulp Fiction
+                </p>
+                <p
+                  className="rating"
+                >
+                  4.7
+                </p>
+              </div>
+              <p
+                className="genre"
+              >
+                Oscar-winning Movies
+              </p>
+              <div
+                className="wrapper"
+              >
+                <p
+                  className="year"
+                >
+                  1995
+                </p>
+                <p
+                  className="duration"
+                >
+                  113 min
+                </p>
+              </div>
+              <p
+                className="description"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>,
+          ],
+          "className": "asset-details",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "imgUrl": "test-file-stub",
+              "posterSize": "poster-large",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="wrapper"
+                >
+                  <p
+                    className="title"
+                  >
+                    Pulp Fiction
+                  </p>
+                  <p
+                    className="rating"
+                  >
+                    4.7
+                  </p>
+                </div>,
+                <p
+                  className="genre"
+                >
+                  Oscar-winning Movies
+                </p>,
+                <div
+                  className="wrapper"
+                >
+                  <p
+                    className="year"
+                  >
+                    1995
+                  </p>
+                  <p
+                    className="duration"
+                  >
+                    113 min
+                  </p>
+                </div>,
+                <p
+                  className="description"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>,
+              ],
+              "className": "asset-info",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <p
+                      className="title"
+                    >
+                      Pulp Fiction
+                    </p>,
+                    <p
+                      className="rating"
+                    >
+                      4.7
+                    </p>,
+                  ],
+                  "className": "wrapper",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Pulp Fiction",
+                      "className": "title",
+                    },
+                    "ref": null,
+                    "rendered": "Pulp Fiction",
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": 4.7,
+                      "className": "rating",
+                    },
+                    "ref": null,
+                    "rendered": 4.7,
+                    "type": "p",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Oscar-winning Movies",
+                  "className": "genre",
+                },
+                "ref": null,
+                "rendered": "Oscar-winning Movies",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <p
+                      className="year"
+                    >
+                      1995
+                    </p>,
+                    <p
+                      className="duration"
+                    >
+                      113 min
+                    </p>,
+                  ],
+                  "className": "wrapper",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": 1995,
+                      "className": "year",
+                    },
+                    "ref": null,
+                    "rendered": 1995,
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "113 min",
+                      "className": "duration",
+                    },
+                    "ref": null,
+                    "rendered": "113 min",
+                    "type": "p",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                  "className": "description",
+                },
+                "ref": null,
+                "rendered": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="asset-details-header"
+          >
+            <Logo
+              className="asset-details-logo"
+            />
+            <Button
+              buttonClass="search-button button-white"
+            >
+              Search
+            </Button>
+          </div>,
+          <div
+            className="asset-details"
+          >
+            <Poster
+              imgUrl="test-file-stub"
+              posterSize="poster-large"
+            />
+            <div
+              className="asset-info"
+            >
+              <div
+                className="wrapper"
+              >
+                <p
+                  className="title"
+                >
+                  Pulp Fiction
+                </p>
+                <p
+                  className="rating"
+                >
+                  4.7
+                </p>
+              </div>
+              <p
+                className="genre"
+              >
+                Oscar-winning Movies
+              </p>
+              <div
+                className="wrapper"
+              >
+                <p
+                  className="year"
+                >
+                  1995
+                </p>
+                <p
+                  className="duration"
+                >
+                  113 min
+                </p>
+              </div>
+              <p
+                className="description"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>,
+        ],
+        "className": "asset-details-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Logo
+                className="asset-details-logo"
+              />,
+              <Button
+                buttonClass="search-button button-white"
+              >
+                Search
+              </Button>,
+            ],
+            "className": "asset-details-header",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "className": "asset-details-logo",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "buttonClass": "search-button button-white",
+                "children": "Search",
+              },
+              "ref": null,
+              "rendered": "Search",
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Poster
+                imgUrl="test-file-stub"
+                posterSize="poster-large"
+              />,
+              <div
+                className="asset-info"
+              >
+                <div
+                  className="wrapper"
+                >
+                  <p
+                    className="title"
+                  >
+                    Pulp Fiction
+                  </p>
+                  <p
+                    className="rating"
+                  >
+                    4.7
+                  </p>
+                </div>
+                <p
+                  className="genre"
+                >
+                  Oscar-winning Movies
+                </p>
+                <div
+                  className="wrapper"
+                >
+                  <p
+                    className="year"
+                  >
+                    1995
+                  </p>
+                  <p
+                    className="duration"
+                  >
+                    113 min
+                  </p>
+                </div>
+                <p
+                  className="description"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+              </div>,
+            ],
+            "className": "asset-details",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "imgUrl": "test-file-stub",
+                "posterSize": "poster-large",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="wrapper"
+                  >
+                    <p
+                      className="title"
+                    >
+                      Pulp Fiction
+                    </p>
+                    <p
+                      className="rating"
+                    >
+                      4.7
+                    </p>
+                  </div>,
+                  <p
+                    className="genre"
+                  >
+                    Oscar-winning Movies
+                  </p>,
+                  <div
+                    className="wrapper"
+                  >
+                    <p
+                      className="year"
+                    >
+                      1995
+                    </p>
+                    <p
+                      className="duration"
+                    >
+                      113 min
+                    </p>
+                  </div>,
+                  <p
+                    className="description"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>,
+                ],
+                "className": "asset-info",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <p
+                        className="title"
+                      >
+                        Pulp Fiction
+                      </p>,
+                      <p
+                        className="rating"
+                      >
+                        4.7
+                      </p>,
+                    ],
+                    "className": "wrapper",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Pulp Fiction",
+                        "className": "title",
+                      },
+                      "ref": null,
+                      "rendered": "Pulp Fiction",
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": 4.7,
+                        "className": "rating",
+                      },
+                      "ref": null,
+                      "rendered": 4.7,
+                      "type": "p",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Oscar-winning Movies",
+                    "className": "genre",
+                  },
+                  "ref": null,
+                  "rendered": "Oscar-winning Movies",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <p
+                        className="year"
+                      >
+                        1995
+                      </p>,
+                      <p
+                        className="duration"
+                      >
+                        113 min
+                      </p>,
+                    ],
+                    "className": "wrapper",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": 1995,
+                        "className": "year",
+                      },
+                      "ref": null,
+                      "rendered": 1995,
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "113 min",
+                        "className": "duration",
+                      },
+                      "ref": null,
+                      "rendered": "113 min",
+                      "type": "p",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                    "className": "description",
+                  },
+                  "ref": null,
+                  "rendered": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`<AssetDetails /> should render AssetDetails and match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <AssetDetails
+    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    duration={113}
+    genre="Oscar-winning Movies"
+    rating={4.7}
+    title="Pulp Fiction"
+    year={1995}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="asset-details-header"
+        >
+          <Logo
+            className="asset-details-logo"
+          />
+          <Button
+            buttonClass="search-button button-white"
+          >
+            Search
+          </Button>
+        </div>,
+        <div
+          className="asset-details"
+        >
+          <Poster
+            imgUrl="test-file-stub"
+            posterSize="poster-large"
+          />
+          <div
+            className="asset-info"
+          >
+            <div
+              className="wrapper"
+            >
+              <p
+                className="title"
+              >
+                Pulp Fiction
+              </p>
+              <p
+                className="rating"
+              >
+                4.7
+              </p>
+            </div>
+            <p
+              className="genre"
+            >
+              Oscar-winning Movies
+            </p>
+            <div
+              className="wrapper"
+            >
+              <p
+                className="year"
+              >
+                1995
+              </p>
+              <p
+                className="duration"
+              >
+                113 min
+              </p>
+            </div>
+            <p
+              className="description"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>,
+      ],
+      "className": "asset-details-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Logo
+              className="asset-details-logo"
+            />,
+            <Button
+              buttonClass="search-button button-white"
+            >
+              Search
+            </Button>,
+          ],
+          "className": "asset-details-header",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "className": "asset-details-logo",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "buttonClass": "search-button button-white",
+              "children": "Search",
+            },
+            "ref": null,
+            "rendered": "Search",
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Poster
+              imgUrl="test-file-stub"
+              posterSize="poster-large"
+            />,
+            <div
+              className="asset-info"
+            >
+              <div
+                className="wrapper"
+              >
+                <p
+                  className="title"
+                >
+                  Pulp Fiction
+                </p>
+                <p
+                  className="rating"
+                >
+                  4.7
+                </p>
+              </div>
+              <p
+                className="genre"
+              >
+                Oscar-winning Movies
+              </p>
+              <div
+                className="wrapper"
+              >
+                <p
+                  className="year"
+                >
+                  1995
+                </p>
+                <p
+                  className="duration"
+                >
+                  113 min
+                </p>
+              </div>
+              <p
+                className="description"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>,
+          ],
+          "className": "asset-details",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "imgUrl": "test-file-stub",
+              "posterSize": "poster-large",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="wrapper"
+                >
+                  <p
+                    className="title"
+                  >
+                    Pulp Fiction
+                  </p>
+                  <p
+                    className="rating"
+                  >
+                    4.7
+                  </p>
+                </div>,
+                <p
+                  className="genre"
+                >
+                  Oscar-winning Movies
+                </p>,
+                <div
+                  className="wrapper"
+                >
+                  <p
+                    className="year"
+                  >
+                    1995
+                  </p>
+                  <p
+                    className="duration"
+                  >
+                    113 min
+                  </p>
+                </div>,
+                <p
+                  className="description"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>,
+              ],
+              "className": "asset-info",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <p
+                      className="title"
+                    >
+                      Pulp Fiction
+                    </p>,
+                    <p
+                      className="rating"
+                    >
+                      4.7
+                    </p>,
+                  ],
+                  "className": "wrapper",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Pulp Fiction",
+                      "className": "title",
+                    },
+                    "ref": null,
+                    "rendered": "Pulp Fiction",
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": 4.7,
+                      "className": "rating",
+                    },
+                    "ref": null,
+                    "rendered": 4.7,
+                    "type": "p",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Oscar-winning Movies",
+                  "className": "genre",
+                },
+                "ref": null,
+                "rendered": "Oscar-winning Movies",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <p
+                      className="year"
+                    >
+                      1995
+                    </p>,
+                    <p
+                      className="duration"
+                    >
+                      113 min
+                    </p>,
+                  ],
+                  "className": "wrapper",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": 1995,
+                      "className": "year",
+                    },
+                    "ref": null,
+                    "rendered": 1995,
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "113 min",
+                      "className": "duration",
+                    },
+                    "ref": null,
+                    "rendered": "113 min",
+                    "type": "p",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                  "className": "description",
+                },
+                "ref": null,
+                "rendered": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="asset-details-header"
+          >
+            <Logo
+              className="asset-details-logo"
+            />
+            <Button
+              buttonClass="search-button button-white"
+            >
+              Search
+            </Button>
+          </div>,
+          <div
+            className="asset-details"
+          >
+            <Poster
+              imgUrl="test-file-stub"
+              posterSize="poster-large"
+            />
+            <div
+              className="asset-info"
+            >
+              <div
+                className="wrapper"
+              >
+                <p
+                  className="title"
+                >
+                  Pulp Fiction
+                </p>
+                <p
+                  className="rating"
+                >
+                  4.7
+                </p>
+              </div>
+              <p
+                className="genre"
+              >
+                Oscar-winning Movies
+              </p>
+              <div
+                className="wrapper"
+              >
+                <p
+                  className="year"
+                >
+                  1995
+                </p>
+                <p
+                  className="duration"
+                >
+                  113 min
+                </p>
+              </div>
+              <p
+                className="description"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>,
+        ],
+        "className": "asset-details-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Logo
+                className="asset-details-logo"
+              />,
+              <Button
+                buttonClass="search-button button-white"
+              >
+                Search
+              </Button>,
+            ],
+            "className": "asset-details-header",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "className": "asset-details-logo",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "buttonClass": "search-button button-white",
+                "children": "Search",
+              },
+              "ref": null,
+              "rendered": "Search",
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Poster
+                imgUrl="test-file-stub"
+                posterSize="poster-large"
+              />,
+              <div
+                className="asset-info"
+              >
+                <div
+                  className="wrapper"
+                >
+                  <p
+                    className="title"
+                  >
+                    Pulp Fiction
+                  </p>
+                  <p
+                    className="rating"
+                  >
+                    4.7
+                  </p>
+                </div>
+                <p
+                  className="genre"
+                >
+                  Oscar-winning Movies
+                </p>
+                <div
+                  className="wrapper"
+                >
+                  <p
+                    className="year"
+                  >
+                    1995
+                  </p>
+                  <p
+                    className="duration"
+                  >
+                    113 min
+                  </p>
+                </div>
+                <p
+                  className="description"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+              </div>,
+            ],
+            "className": "asset-details",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "imgUrl": "test-file-stub",
+                "posterSize": "poster-large",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="wrapper"
+                  >
+                    <p
+                      className="title"
+                    >
+                      Pulp Fiction
+                    </p>
+                    <p
+                      className="rating"
+                    >
+                      4.7
+                    </p>
+                  </div>,
+                  <p
+                    className="genre"
+                  >
+                    Oscar-winning Movies
+                  </p>,
+                  <div
+                    className="wrapper"
+                  >
+                    <p
+                      className="year"
+                    >
+                      1995
+                    </p>
+                    <p
+                      className="duration"
+                    >
+                      113 min
+                    </p>
+                  </div>,
+                  <p
+                    className="description"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>,
+                ],
+                "className": "asset-info",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <p
+                        className="title"
+                      >
+                        Pulp Fiction
+                      </p>,
+                      <p
+                        className="rating"
+                      >
+                        4.7
+                      </p>,
+                    ],
+                    "className": "wrapper",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Pulp Fiction",
+                        "className": "title",
+                      },
+                      "ref": null,
+                      "rendered": "Pulp Fiction",
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": 4.7,
+                        "className": "rating",
+                      },
+                      "ref": null,
+                      "rendered": 4.7,
+                      "type": "p",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Oscar-winning Movies",
+                    "className": "genre",
+                  },
+                  "ref": null,
+                  "rendered": "Oscar-winning Movies",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <p
+                        className="year"
+                      >
+                        1995
+                      </p>,
+                      <p
+                        className="duration"
+                      >
+                        113 min
+                      </p>,
+                    ],
+                    "className": "wrapper",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": 1995,
+                        "className": "year",
+                      },
+                      "ref": null,
+                      "rendered": 1995,
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "113 min",
+                        "className": "duration",
+                      },
+                      "ref": null,
+                      "rendered": "113 min",
+                      "type": "p",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                    "className": "description",
+                  },
+                  "ref": null,
+                  "rendered": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

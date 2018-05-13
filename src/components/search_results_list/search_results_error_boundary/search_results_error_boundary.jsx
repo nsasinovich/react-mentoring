@@ -11,7 +11,7 @@ export default class SearchResultsErrorBoundary extends React.Component {
 
     componentDidCatch(error) {
         this.setState({ hasError: true });
-        console.error(error);
+        // console.error(error);
     }
 
     render() {

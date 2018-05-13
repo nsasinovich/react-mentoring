@@ -3,10 +3,10 @@ const path = require('path');
 
 const app = express();
 
-app.use('/src', express.static(__dirname + '/src'));
+app.use('/', express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
-    res.sendFile(__dirname + '/src/index.html');
+    res.sendFile(__dirname + '/public/index.html');
 });
 
 app.listen(3000, function() {

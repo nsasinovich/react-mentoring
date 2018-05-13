@@ -43,7 +43,6 @@ AssetTile.propTypes = {
 
 // will be removed later
 AssetTile.defaultProps = {
-    posterUrl: 'https://cdn.miramax.com/media/assets/Pulp-Fiction1.png',
     year: 1995,
     title: 'Pulp Fiction',
     genre: 'Oscar-winning movies',

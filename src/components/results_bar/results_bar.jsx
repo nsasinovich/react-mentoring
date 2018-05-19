@@ -1,20 +1,22 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SortingOptions } from '../../constants/app_constants';
 
 import './results_bar.scss';
+import { changeSort } from '../../action_creators/action_creators';
 
-const ResultsBar = ({ count, currentSortName, onSortChange }) => {
+const ResultsBar = ({ count, currentSortName, changeCurrentSort }) => {
     const resultsFoundMessage = `${count} movies found`;
 
-    const sortingOptions = Object.values(SortingOptions).map((option) => {
-        const classes = classNames({ selected: option.name === currentSortName });
-        const onOptionClick = () => onSortChange(option);
+    const sortingOptions = Object.values(SortingOptions).map((sort) => {
+        const classes = classNames({ selected: sort.name === currentSortName });
+        const onOptionClick = () => changeCurrentSort(sort);
 
         return (
-            <li key={option.name} className={classes} onClick={onOptionClick}>
-                <p>{option.name}</p>
+            <li key={sort.name} className={classes} onClick={onOptionClick}>
+                <p>{sort.name}</p>
             </li>
         );
     });
@@ -35,11 +37,20 @@ const ResultsBar = ({ count, currentSortName, onSortChange }) => {
 ResultsBar.propTypes = {
     count: PropTypes.number,
     currentSortName: PropTypes.string,
-    onSortChange: PropTypes.func,
+    changeCurrentSort: PropTypes.func,
 };
 
 ResultsBar.defaultProps = {
     count: 0,
 };
 
-export default ResultsBar;
+const mapStateToProps = state => ({
+    count: state.results.length,
+    currentSortName: state.currentSort.name,
+});
+
+const mapDispatchToProps = dispatch => ({
+    changeCurrentSort: sort => dispatch(changeSort(sort)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ResultsBar);

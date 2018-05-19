@@ -6,6 +6,8 @@ import appReducer from './reducers/app_reducer';
 import App from './app';
 
 const store = createStore(appReducer);
+window.store = store; // will be removed
+
 const root = document.getElementById('root');
 
 ReactDOM.render(

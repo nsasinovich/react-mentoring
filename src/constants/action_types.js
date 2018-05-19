@@ -1,3 +1,4 @@
 export default {
     CHANGE_SORT: 'CHANGE_SORT',
+    UPDATE_SEARCH_INPUT: 'UPDATE_SEARCH_INPUT',
 };

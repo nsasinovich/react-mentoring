@@ -11,10 +11,10 @@ export const FilterOptions = {
 export const SortingOptions = {
     RELEASE: {
         name: 'release date',
-        sortingField: 'year',
+        sortField: 'year',
     },
     RATING: {
         name: 'rating',
-        sortingField: 'rating',
+        sortField: 'rating',
     },
 };

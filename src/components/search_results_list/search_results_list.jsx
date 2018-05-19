@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import AssetTile from '../asset_tile/asset_tile';
 import NoResults from '../no_results/no_results';
 import SearchResultsErrorBoundary from './search_results_error_boundary/search_results_error_boundary';
@@ -37,4 +38,12 @@ SearchResultsList.defaultProps = {
     results: [],
 };
 
-export default SearchResultsList;
+const mapStateToProps = state => ({
+    results: state.results,
+    sortField: state.selectedSort.sortField,
+});
+
+const mapDispatchToProps = dispatch => ({
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchResultsList);

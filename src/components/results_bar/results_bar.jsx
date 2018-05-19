@@ -7,11 +7,11 @@ import { SortingOptions } from '../../constants/app_constants';
 import './results_bar.scss';
 import { changeSort } from '../../action_creators/action_creators';
 
-const ResultsBar = ({ count, currentSortName, changeCurrentSort }) => {
+const ResultsBar = ({ count, selectedSortName, changeCurrentSort }) => {
     const resultsFoundMessage = `${count} movies found`;
 
     const sortingOptions = Object.values(SortingOptions).map((sort) => {
-        const classes = classNames({ selected: sort.name === currentSortName });
+        const classes = classNames({ selected: sort.name === selectedSortName });
         const onOptionClick = () => changeCurrentSort(sort);
 
         return (
@@ -36,7 +36,7 @@ const ResultsBar = ({ count, currentSortName, changeCurrentSort }) => {
 
 ResultsBar.propTypes = {
     count: PropTypes.number,
-    currentSortName: PropTypes.string,
+    selectedSortName: PropTypes.string,
     changeCurrentSort: PropTypes.func,
 };
 
@@ -46,7 +46,7 @@ ResultsBar.defaultProps = {
 
 const mapStateToProps = state => ({
     count: state.results.length,
-    currentSortName: state.currentSort.name,
+    selectedSortName: state.selectedSort.name,
 });
 
 const mapDispatchToProps = dispatch => ({

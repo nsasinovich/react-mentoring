@@ -15,14 +15,14 @@ const resultAssets = [
 
 const initialState = {
     results: resultAssets, // results: [],
-    currentSort: SortingOptions.RATING,
+    selectedSort: SortingOptions.RATING,
 };
 
 const appReducer = (state = initialState, action) => {
     switch (action.type) {
         case ActionTypes.CHANGE_SORT:
             return Object.assign({}, state, {
-                currentSort: action.sort,
+                selectedSort: action.sort,
             });
         default:
             return state;

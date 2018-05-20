@@ -24,3 +24,7 @@ export const setSelectedMovie = movie => ({
     type: ActionTypes.SET_SELECTED_MOVIE,
     movie,
 });
+
+export const resetSelectedMovie = () => ({
+    type: ActionTypes.RESET_SELECTED_MOVIE,
+});

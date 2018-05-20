@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import Poster from '../shared/poster/poster';
 import Logo from '../shared/logo/logo';
 import Button from '../shared/button/button';
+import { resetSelectedMovie } from '../../actions/actions';
 import { PosterSizes } from '../../constants/app_constants';
 
 import './asset_details.scss';
 
-const AssetDetails = (props) => {
-    const { asset } = props;
+const AssetDetails = ({ asset, onSearchButtonClick }) => {
     const year = new Date(asset.release_date).getUTCFullYear();
     const runtime = asset.runtime ? `${asset.runtime} min` : null;
     const genres = asset.genres.join(', ');
@@ -16,7 +17,7 @@ const AssetDetails = (props) => {
     const header = (
         <div className="asset-details-header">
             <Logo className="asset-details-logo"/>
-            <Button buttonClass="search-button button-white">Search</Button>
+            <Button buttonClass="search-button button-white" onClick={onSearchButtonClick}>Search</Button>
         </div>
     );
 
@@ -52,11 +53,15 @@ const AssetDetails = (props) => {
 
 AssetDetails.propTypes = {
     asset: PropTypes.object,
+    onSearchButtonClick: PropTypes.object,
 };
 
 AssetDetails.defaultProps = {
     asset: {},
 };
 
+const mapDispatchToProps = {
+    onSearchButtonClick: resetSelectedMovie,
+};
 
-export default AssetDetails;
+export default connect(null, mapDispatchToProps)(AssetDetails);

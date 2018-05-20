@@ -1,5 +1,6 @@
 import ActionTypes from '../constants/action_types';
 
+// ACTION CREATORS
 export const changeSort = sort => ({
     type: ActionTypes.CHANGE_SORT,
     sort,
@@ -28,3 +29,22 @@ export const setSelectedMovie = movie => ({
 export const resetSelectedMovie = () => ({
     type: ActionTypes.RESET_SELECTED_MOVIE,
 });
+
+// ACTIONS
+export const fetchResults = ({ searchInput, selectedFilter }) => (dispatch) => {
+    const endpoint = 'http://react-cdp-api.herokuapp.com';
+    const searchQuery = `search=${searchInput}&searchBy=${selectedFilter}`;
+
+    fetch(`${endpoint}/movies?${searchQuery}`)
+        .then(response => response.json())
+        .then(json => dispatch(updateResults(json)))
+        .catch((e) => {
+            console.error('SearchHeader', 'findMovies()', e);
+
+            dispatch(updateResults({
+                results: [],
+                resultsCount: 0,
+            }));
+        });
+};
+

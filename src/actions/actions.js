@@ -20,3 +20,7 @@ export const changeFilter = filter => ({
     filter,
 });
 
+export const setSelectedMovie = movie => ({
+    type: ActionTypes.SET_SELECTED_MOVIE,
+    movie,
+});

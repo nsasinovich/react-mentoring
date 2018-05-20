@@ -19,6 +19,7 @@ const initialState = {
     searchInput: '',
     selectedSort: SortingOptions.RATING,
     selectedFilter: FilterOptions.TITLE,
+    selectedMovieDetails: null,
 };
 
 const appReducer = (state = initialState, action) => {
@@ -39,6 +40,10 @@ const appReducer = (state = initialState, action) => {
             return Object.assign({}, state, {
                 results: action.results.data,
                 resultsCount: action.results.total,
+            });
+        case ActionTypes.SET_SELECTED_MOVIE:
+            return Object.assign({}, state, {
+                selectedMovieDetails: action.movie,
             });
         default:
             return state;

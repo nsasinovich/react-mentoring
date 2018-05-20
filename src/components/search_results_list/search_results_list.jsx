@@ -17,10 +17,7 @@ const SearchResultsList = ({ results, sortField }) => {
     const children = sortedResults.length ? sortedResults.map(asset => (
         <AssetTile
             key={asset.title}
-            title={asset.title}
-            posterUrl={asset.poster_path}
-            year={new Date(asset.release_date).getUTCFullYear()}
-            genres={asset.genres}
+            asset={asset}
         />
     )) : <NoResults />;
 

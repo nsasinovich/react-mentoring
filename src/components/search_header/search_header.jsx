@@ -18,7 +18,6 @@ class SearchHeader extends React.Component {
     findMovies() {
         const {
             searchInput,
-            sortOption,
             selectedFilter,
             updateSearchResults,
         } = this.props;
@@ -77,7 +76,6 @@ class SearchHeader extends React.Component {
 
 SearchHeader.propTypes = {
     searchInput: PropTypes.string,
-    sortOption: PropTypes.string,
     selectedFilter: PropTypes.string,
     updateSearchResults: PropTypes.func,
     changeCurrentFilter: PropTypes.func,
@@ -85,7 +83,6 @@ SearchHeader.propTypes = {
 
 const mapStateToProps = state => ({
     searchInput: state.searchInput,
-    sortOption: state.selectedSort.name,
     selectedFilter: state.selectedFilter,
 });
 

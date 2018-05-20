@@ -1,5 +1,5 @@
 import ActionTypes from '../constants/action_types';
-import { SortingOptions } from '../constants/app_constants';
+import { SortingOptions, FilterOptions } from '../constants/app_constants';
 
 // const resultAssets = [
 //     { title: 'Asset 1', year: 1995, rating: 1 },
@@ -15,8 +15,10 @@ import { SortingOptions } from '../constants/app_constants';
 
 const initialState = {
     results: [],
+    resultsCount: 0,
     searchInput: '',
     selectedSort: SortingOptions.RATING,
+    selectedFilter: FilterOptions.TITLE,
 };
 
 const appReducer = (state = initialState, action) => {
@@ -25,9 +27,18 @@ const appReducer = (state = initialState, action) => {
             return Object.assign({}, state, {
                 selectedSort: action.sort,
             });
+        case ActionTypes.CHANGE_FILTER:
+            return Object.assign({}, state, {
+                selectedFilter: action.filter,
+            });
         case ActionTypes.UPDATE_SEARCH_INPUT:
             return Object.assign({}, state, {
                 searchInput: action.input,
+            });
+        case ActionTypes.UPDATE_SEARCH_RESULTS:
+            return Object.assign({}, state, {
+                results: action.results.data,
+                resultsCount: action.results.total,
             });
         default:
             return state;

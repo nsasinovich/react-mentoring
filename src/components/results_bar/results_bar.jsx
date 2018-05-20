@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import { SortingOptions } from '../../constants/app_constants';
 
 import './results_bar.scss';
-import { changeSort } from '../../action_creators/action_creators';
+import { changeSort } from '../../actions/actions';
 
 const ResultsBar = ({ count, selectedSortName, changeCurrentSort }) => {
     const resultsFoundMessage = `${count} movies found`;
@@ -45,12 +45,12 @@ ResultsBar.defaultProps = {
 };
 
 const mapStateToProps = state => ({
-    count: state.results.length,
+    count: state.resultsCount,
     selectedSortName: state.selectedSort.name,
 });
 
-const mapDispatchToProps = dispatch => ({
-    changeCurrentSort: sort => dispatch(changeSort(sort)),
-});
+const mapDispatchToProps = {
+    changeCurrentSort: changeSort,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(ResultsBar);

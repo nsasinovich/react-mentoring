@@ -1,19 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { updateSearchInput } from '../../../action_creators/action_creators';
+import { updateSearchInput } from '../../../actions/actions';
 import arrowIcon from '../../../images/arrow.png';
 
 import './search_input.scss';
 
 const INPUT_PLACEHOLDER = 'Let\'s find your movie';
 
-const SearchInput = ({ updateSearchInputValue, input }) => (
+const SearchInput = ({ updateSearchInputValue, onEnterKey }) => (
     <div className="search-input-wrapper">
         <input
             className="search-input"
             placeholder={INPUT_PLACEHOLDER}
-            onChange={event => {updateSearchInputValue(event.target.value)}}
+            onChange={event => updateSearchInputValue(event.target.value)}
+            onKeyPress={event => event.key === 'Enter' && onEnterKey()}
         />
         <img src={arrowIcon} />
     </div>
@@ -21,15 +22,13 @@ const SearchInput = ({ updateSearchInputValue, input }) => (
 
 SearchInput.propTypes = {
     updateSearchInputValue: PropTypes.func,
-};
+    onEnterKey: PropTypes.func,
 
-const mapStateToProps = state => ({
-    input: state.searchInput
-});
+};
 
 const mapDispatchToProps = dispatch => ({
     updateSearchInputValue: input => dispatch(updateSearchInput(input)),
 });
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchInput);
+export default connect(null, mapDispatchToProps)(SearchInput);

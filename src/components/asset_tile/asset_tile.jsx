@@ -10,7 +10,7 @@ const AssetTile = (props) => {
         posterUrl,
         year,
         title,
-        genre,
+        genres,
     } = props;
 
     const poster = <Poster posterSize={PosterSizes.MEDIUM} imgUrl={posterUrl} />;
@@ -19,7 +19,7 @@ const AssetTile = (props) => {
         <div className="asset-info">
             <div>
                 <p className="title">{title}</p>
-                <p className="genre">{genre}</p>
+                <p className="genre">{genres[0]}</p>
             </div>
             <p className="year">{year}</p>
         </div>
@@ -38,14 +38,7 @@ AssetTile.propTypes = {
     posterUrl: PropTypes.string,
     year: PropTypes.number,
     title: PropTypes.string,
-    genre: PropTypes.string,
-};
-
-// will be removed later
-AssetTile.defaultProps = {
-    year: 1995,
-    title: 'Pulp Fiction',
-    genre: 'Oscar-winning movies',
+    genres: PropTypes.array,
 };
 
 export default AssetTile;

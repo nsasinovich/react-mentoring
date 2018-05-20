@@ -4,7 +4,7 @@ export const PosterSizes = {
 };
 
 export const FilterOptions = {
-    GENRE: 'genre',
+    GENRE: 'genres',
     TITLE: 'title',
 };
 
@@ -15,6 +15,6 @@ export const SortingOptions = {
     },
     RATING: {
         name: 'rating',
-        sortField: 'rating',
+        sortField: 'vote_count',
     },
 };

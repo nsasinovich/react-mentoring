@@ -8,15 +8,19 @@ import SearchResultsErrorBoundary from './search_results_error_boundary/search_r
 import './search_results_list.scss';
 
 const SearchResultsList = ({ results, sortField }) => {
-    const sortedResults = results.sort((res1, res2) => res2[sortField] - res1[sortField]);
+    const formattedResults = results.map((res) => {
+        res.year = new Date(res.release_date).getUTCFullYear();
+        return res;
+    });
+    const sortedResults = formattedResults.sort((res1, res2) => res2[sortField] - res1[sortField]);
 
     const children = sortedResults.length ? sortedResults.map(asset => (
         <AssetTile
             key={asset.title}
             title={asset.title}
-            posterUrl={asset.posterUrl}
-            year={asset.year}
-            genre={asset.genre}
+            posterUrl={asset.poster_path}
+            year={new Date(asset.release_date).getUTCFullYear()}
+            genres={asset.genres}
         />
     )) : <NoResults />;
 
@@ -43,7 +47,4 @@ const mapStateToProps = state => ({
     sortField: state.selectedSort.sortField,
 });
 
-const mapDispatchToProps = dispatch => ({
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(SearchResultsList);
+export default connect(mapStateToProps)(SearchResultsList);

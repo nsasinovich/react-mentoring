@@ -26,6 +26,11 @@ describe('Actions', () => {
         total: 12,
     };
 
+    afterEach(() => {
+        fetchMock.reset();
+        fetchMock.restore();
+    });
+
     it('should create an action to change sort', () => {
         const expectedAction = {
             type: ActionTypes.CHANGE_SORT,
@@ -77,7 +82,7 @@ describe('Actions', () => {
         expect(resetSelectedMovie()).toEqual(expectedAction);
     });
 
-    it('should create an update results action after results are loaded', () => {
+    it('should create update results action after results are loaded', () => {
         const searchParams = {
             searchInput: 'test',
             selectedFilter: FilterOptions.TITLE,
@@ -93,6 +98,32 @@ describe('Actions', () => {
         const expectedAction = {
             type: ActionTypes.UPDATE_SEARCH_RESULTS,
             results: mockResults,
+        };
+
+        return store.dispatch(fetchResults(searchParams)).then(() => {
+            expect(store.getActions()).toEqual([expectedAction]);
+        });
+    });
+
+    it('should create update results action with default params after results are failed', () => {
+        const searchParams = {
+            searchInput: 'test',
+            selectedFilter: FilterOptions.TITLE,
+        };
+
+        const store = mockStore(INITIAL_STATE);
+
+        fetchMock.getOnce(
+            `http://react-cdp-api.herokuapp.com/movies?search=test&searchBy=${FilterOptions.TITLE}`, 
+            () => { throw new Error('Error'); },
+        );
+
+        const expectedAction = {
+            type: ActionTypes.UPDATE_SEARCH_RESULTS,
+            results: {
+                results: [],
+                resultsCount: 0,
+            },
         };
 
         return store.dispatch(fetchResults(searchParams)).then(() => {

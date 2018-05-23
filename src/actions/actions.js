@@ -35,7 +35,7 @@ export const fetchResults = ({ searchInput, selectedFilter }) => (dispatch) => {
     const endpoint = 'http://react-cdp-api.herokuapp.com';
     const searchQuery = `search=${searchInput}&searchBy=${selectedFilter}`;
 
-    fetch(`${endpoint}/movies?${searchQuery}`)
+    return fetch(`${endpoint}/movies?${searchQuery}`)
         .then(response => response.json())
         .then(json => dispatch(updateResults(json)))
         .catch((e) => {

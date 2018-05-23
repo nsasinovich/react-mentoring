@@ -1,19 +1,30 @@
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
+import fetchMock from 'fetch-mock';
 import ActionTypes from 'src/constants/action_types';
-import { SortingOptions } from 'src/constants/app_constants';
+import {
+    SortingOptions,
+    FilterOptions,
+    INITIAL_STATE,
+} from 'src/constants/app_constants';
+
 import {
     changeSort,
     updateSearchInput,
     updateResults,
     changeFilter,
     setSelectedMovie,
-    resetSelectedMovie
+    resetSelectedMovie,
+    fetchResults,
 } from 'src/actions/actions';
 
 describe('Actions', () => {
     const middlewares = [thunk];
     const mockStore = configureStore(middlewares);
+    const mockResults = {
+        data: [{ obj1: 1 }, { obj2: 2 }],
+        total: 12,
+    };
 
     it('should create an action to change sort', () => {
         const expectedAction = {
@@ -33,11 +44,6 @@ describe('Actions', () => {
     });
 
     it('should create an action to update search results', () => {
-        const mockResults = {
-            data: [{ obj1: 1 }, { obj2: 2 }],
-            total: 12,
-        };
-
         const expectedAction = {
             type: ActionTypes.UPDATE_SEARCH_RESULTS,
             results: mockResults,
@@ -69,5 +75,28 @@ describe('Actions', () => {
             type: ActionTypes.RESET_SELECTED_MOVIE,
         };
         expect(resetSelectedMovie()).toEqual(expectedAction);
+    });
+
+    it('should create an update results action after results are loaded', () => {
+        const searchParams = {
+            searchInput: 'test',
+            selectedFilter: FilterOptions.TITLE,
+        };
+
+        const store = mockStore(INITIAL_STATE);
+
+        fetchMock.getOnce(
+            `http://react-cdp-api.herokuapp.com/movies?search=test&searchBy=${FilterOptions.TITLE}`, 
+            mockResults,
+        );
+
+        const expectedAction = {
+            type: ActionTypes.UPDATE_SEARCH_RESULTS,
+            results: mockResults,
+        };
+
+        return store.dispatch(fetchResults(searchParams)).then(() => {
+            expect(store.getActions()).toEqual([expectedAction]);
+        });
     });
 });

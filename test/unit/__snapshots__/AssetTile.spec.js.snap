@@ -5,9 +5,27 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <AssetTile
-    genre="Oscar-winning movies"
-    title="Pulp Fiction"
-    year={1995}
+    asset={
+      Object {
+        "genres": Array [
+          "genre1",
+          "genre2",
+        ],
+        "poster_path": "poster_path",
+        "release_date": "2017-06-06",
+      }
+    }
+    showMovieDetails={[Function]}
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -23,7 +41,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Poster
-          imgUrl="test-file-stub"
+          imgUrl="poster_path"
           posterSize="poster-medium"
         />,
         <div
@@ -32,19 +50,18 @@ ShallowWrapper {
           <div>
             <p
               className="title"
-            >
-              Pulp Fiction
-            </p>
+              onClick={[Function]}
+            />
             <p
               className="genre"
             >
-              Oscar-winning movies
+              genre1
             </p>
           </div>
           <p
             className="year"
           >
-            1995
+            2017
           </p>
         </div>,
       ],
@@ -57,7 +74,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "imgUrl": "test-file-stub",
+          "imgUrl": "poster_path",
           "posterSize": "poster-medium",
         },
         "ref": null,
@@ -73,19 +90,18 @@ ShallowWrapper {
             <div>
               <p
                 className="title"
-              >
-                Pulp Fiction
-              </p>
+                onClick={[Function]}
+              />
               <p
                 className="genre"
               >
-                Oscar-winning movies
+                genre1
               </p>
             </div>,
             <p
               className="year"
             >
-              1995
+              2017
             </p>,
           ],
           "className": "asset-info",
@@ -100,13 +116,12 @@ ShallowWrapper {
               "children": Array [
                 <p
                   className="title"
-                >
-                  Pulp Fiction
-                </p>,
+                  onClick={[Function]}
+                />,
                 <p
                   className="genre"
                 >
-                  Oscar-winning movies
+                  genre1
                 </p>,
               ],
             },
@@ -117,11 +132,12 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Pulp Fiction",
+                  "children": undefined,
                   "className": "title",
+                  "onClick": [Function],
                 },
                 "ref": null,
-                "rendered": "Pulp Fiction",
+                "rendered": null,
                 "type": "p",
               },
               Object {
@@ -129,11 +145,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Oscar-winning movies",
+                  "children": "genre1",
                   "className": "genre",
                 },
                 "ref": null,
-                "rendered": "Oscar-winning movies",
+                "rendered": "genre1",
                 "type": "p",
               },
             ],
@@ -144,11 +160,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": 1995,
+              "children": 2017,
               "className": "year",
             },
             "ref": null,
-            "rendered": 1995,
+            "rendered": 2017,
             "type": "p",
           },
         ],
@@ -165,7 +181,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Poster
-            imgUrl="test-file-stub"
+            imgUrl="poster_path"
             posterSize="poster-medium"
           />,
           <div
@@ -174,19 +190,18 @@ ShallowWrapper {
             <div>
               <p
                 className="title"
-              >
-                Pulp Fiction
-              </p>
+                onClick={[Function]}
+              />
               <p
                 className="genre"
               >
-                Oscar-winning movies
+                genre1
               </p>
             </div>
             <p
               className="year"
             >
-              1995
+              2017
             </p>
           </div>,
         ],
@@ -199,7 +214,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "imgUrl": "test-file-stub",
+            "imgUrl": "poster_path",
             "posterSize": "poster-medium",
           },
           "ref": null,
@@ -215,19 +230,18 @@ ShallowWrapper {
               <div>
                 <p
                   className="title"
-                >
-                  Pulp Fiction
-                </p>
+                  onClick={[Function]}
+                />
                 <p
                   className="genre"
                 >
-                  Oscar-winning movies
+                  genre1
                 </p>
               </div>,
               <p
                 className="year"
               >
-                1995
+                2017
               </p>,
             ],
             "className": "asset-info",
@@ -242,13 +256,12 @@ ShallowWrapper {
                 "children": Array [
                   <p
                     className="title"
-                  >
-                    Pulp Fiction
-                  </p>,
+                    onClick={[Function]}
+                  />,
                   <p
                     className="genre"
                   >
-                    Oscar-winning movies
+                    genre1
                   </p>,
                 ],
               },
@@ -259,11 +272,12 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Pulp Fiction",
+                    "children": undefined,
                     "className": "title",
+                    "onClick": [Function],
                   },
                   "ref": null,
-                  "rendered": "Pulp Fiction",
+                  "rendered": null,
                   "type": "p",
                 },
                 Object {
@@ -271,11 +285,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Oscar-winning movies",
+                    "children": "genre1",
                     "className": "genre",
                   },
                   "ref": null,
-                  "rendered": "Oscar-winning movies",
+                  "rendered": "genre1",
                   "type": "p",
                 },
               ],
@@ -286,11 +300,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": 1995,
+                "children": 2017,
                 "className": "year",
               },
               "ref": null,
-              "rendered": 1995,
+              "rendered": 2017,
               "type": "p",
             },
           ],
@@ -315,9 +329,27 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <AssetTile
-    genre="Oscar-winning movies"
-    title="Pulp Fiction"
-    year={1995}
+    asset={
+      Object {
+        "genres": Array [
+          "genre1",
+          "genre2",
+        ],
+        "poster_path": "poster_path",
+        "release_date": "2017-06-06",
+      }
+    }
+    showMovieDetails={[Function]}
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -333,7 +365,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Poster
-          imgUrl="test-file-stub"
+          imgUrl="poster_path"
           posterSize="poster-medium"
         />,
         <div
@@ -342,19 +374,18 @@ ShallowWrapper {
           <div>
             <p
               className="title"
-            >
-              Pulp Fiction
-            </p>
+              onClick={[Function]}
+            />
             <p
               className="genre"
             >
-              Oscar-winning movies
+              genre1
             </p>
           </div>
           <p
             className="year"
           >
-            1995
+            2017
           </p>
         </div>,
       ],
@@ -367,7 +398,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "imgUrl": "test-file-stub",
+          "imgUrl": "poster_path",
           "posterSize": "poster-medium",
         },
         "ref": null,
@@ -383,19 +414,18 @@ ShallowWrapper {
             <div>
               <p
                 className="title"
-              >
-                Pulp Fiction
-              </p>
+                onClick={[Function]}
+              />
               <p
                 className="genre"
               >
-                Oscar-winning movies
+                genre1
               </p>
             </div>,
             <p
               className="year"
             >
-              1995
+              2017
             </p>,
           ],
           "className": "asset-info",
@@ -410,13 +440,12 @@ ShallowWrapper {
               "children": Array [
                 <p
                   className="title"
-                >
-                  Pulp Fiction
-                </p>,
+                  onClick={[Function]}
+                />,
                 <p
                   className="genre"
                 >
-                  Oscar-winning movies
+                  genre1
                 </p>,
               ],
             },
@@ -427,11 +456,12 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Pulp Fiction",
+                  "children": undefined,
                   "className": "title",
+                  "onClick": [Function],
                 },
                 "ref": null,
-                "rendered": "Pulp Fiction",
+                "rendered": null,
                 "type": "p",
               },
               Object {
@@ -439,11 +469,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Oscar-winning movies",
+                  "children": "genre1",
                   "className": "genre",
                 },
                 "ref": null,
-                "rendered": "Oscar-winning movies",
+                "rendered": "genre1",
                 "type": "p",
               },
             ],
@@ -454,11 +484,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": 1995,
+              "children": 2017,
               "className": "year",
             },
             "ref": null,
-            "rendered": 1995,
+            "rendered": 2017,
             "type": "p",
           },
         ],
@@ -475,7 +505,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Poster
-            imgUrl="test-file-stub"
+            imgUrl="poster_path"
             posterSize="poster-medium"
           />,
           <div
@@ -484,19 +514,18 @@ ShallowWrapper {
             <div>
               <p
                 className="title"
-              >
-                Pulp Fiction
-              </p>
+                onClick={[Function]}
+              />
               <p
                 className="genre"
               >
-                Oscar-winning movies
+                genre1
               </p>
             </div>
             <p
               className="year"
             >
-              1995
+              2017
             </p>
           </div>,
         ],
@@ -509,7 +538,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "imgUrl": "test-file-stub",
+            "imgUrl": "poster_path",
             "posterSize": "poster-medium",
           },
           "ref": null,
@@ -525,19 +554,18 @@ ShallowWrapper {
               <div>
                 <p
                   className="title"
-                >
-                  Pulp Fiction
-                </p>
+                  onClick={[Function]}
+                />
                 <p
                   className="genre"
                 >
-                  Oscar-winning movies
+                  genre1
                 </p>
               </div>,
               <p
                 className="year"
               >
-                1995
+                2017
               </p>,
             ],
             "className": "asset-info",
@@ -552,13 +580,12 @@ ShallowWrapper {
                 "children": Array [
                   <p
                     className="title"
-                  >
-                    Pulp Fiction
-                  </p>,
+                    onClick={[Function]}
+                  />,
                   <p
                     className="genre"
                   >
-                    Oscar-winning movies
+                    genre1
                   </p>,
                 ],
               },
@@ -569,11 +596,12 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Pulp Fiction",
+                    "children": undefined,
                     "className": "title",
+                    "onClick": [Function],
                   },
                   "ref": null,
-                  "rendered": "Pulp Fiction",
+                  "rendered": null,
                   "type": "p",
                 },
                 Object {
@@ -581,11 +609,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Oscar-winning movies",
+                    "children": "genre1",
                     "className": "genre",
                   },
                   "ref": null,
-                  "rendered": "Oscar-winning movies",
+                  "rendered": "genre1",
                   "type": "p",
                 },
               ],
@@ -596,11 +624,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": 1995,
+                "children": 2017,
                 "className": "year",
               },
               "ref": null,
-              "rendered": 1995,
+              "rendered": 2017,
               "type": "p",
             },
           ],

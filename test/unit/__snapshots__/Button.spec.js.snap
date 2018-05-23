@@ -23,6 +23,7 @@ ShallowWrapper {
     "props": Object {
       "children": "",
       "className": "button ",
+      "onClick": undefined,
     },
     "ref": null,
     "rendered": "",
@@ -36,6 +37,7 @@ ShallowWrapper {
       "props": Object {
         "children": "",
         "className": "button ",
+        "onClick": undefined,
       },
       "ref": null,
       "rendered": "",
@@ -75,6 +77,7 @@ ShallowWrapper {
     "props": Object {
       "children": "test",
       "className": "button ",
+      "onClick": undefined,
     },
     "ref": null,
     "rendered": "test",
@@ -88,6 +91,7 @@ ShallowWrapper {
       "props": Object {
         "children": "test",
         "className": "button ",
+        "onClick": undefined,
       },
       "ref": null,
       "rendered": "test",
@@ -127,6 +131,7 @@ ShallowWrapper {
     "props": Object {
       "children": "",
       "className": "button test",
+      "onClick": undefined,
     },
     "ref": null,
     "rendered": "",
@@ -140,6 +145,7 @@ ShallowWrapper {
       "props": Object {
         "children": "",
         "className": "button test",
+        "onClick": undefined,
       },
       "ref": null,
       "rendered": "",

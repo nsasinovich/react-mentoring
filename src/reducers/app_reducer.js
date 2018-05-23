@@ -1,16 +1,7 @@
 import ActionTypes from '../constants/action_types';
-import { SortingOptions, FilterOptions } from '../constants/app_constants';
+import { INITIAL_STATE } from '../constants/app_constants';
 
-const initialState = {
-    results: [],
-    resultsCount: 0,
-    searchInput: '',
-    selectedSort: SortingOptions.RATING,
-    selectedFilter: FilterOptions.TITLE,
-    selectedMovieDetails: null,
-};
-
-const appReducer = (state = initialState, action) => {
+const appReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case ActionTypes.CHANGE_SORT:
             return Object.assign({}, state, {

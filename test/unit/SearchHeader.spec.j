@@ -1,13 +1,21 @@
 import { shallow, mount } from 'enzyme';
 import React from 'react';
+import configureStore from 'redux-mock-store';
+import { INITIAL_STATE } from 'src/constants/app_constants';
 import SearchHeader from 'src/components/search_header/search_header';
 import SearchInput from 'src/components/search_header/search_input/search_input';
 
+const mockStore = configureStore();
+
+let store;
 let wrapper;
+store = mockStore(INITIAL_STATE);
+
 
 describe('<SearchHeader />', () => {
     beforeEach(() => {
-        wrapper = shallow(<SearchHeader />);
+        store = mockStore(INITIAL_STATE);
+        wrapper = mount(<SearchHeader store={store}/>).dive();
     });
 
     it('should render SearchHeader and match snapshot', () => {
@@ -16,7 +24,7 @@ describe('<SearchHeader />', () => {
 
     it('should contain SearchInput element', () => {
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<SearchInput />)).toBe(true);
+        expect(wrapper.find(SearchInput)).toHaveLength(1);
     });
 
     it('should contain search button', () => {

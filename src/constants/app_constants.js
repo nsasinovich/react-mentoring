@@ -18,3 +18,12 @@ export const SortingOptions = {
         sortField: 'vote_count',
     },
 };
+
+export const INITIAL_STATE = {
+    results: [],
+    resultsCount: 0,
+    searchInput: '',
+    selectedSort: SortingOptions.RATING,
+    selectedFilter: FilterOptions.TITLE,
+    selectedMovieDetails: null,
+};

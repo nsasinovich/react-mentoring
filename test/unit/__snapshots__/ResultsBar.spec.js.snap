@@ -1,410 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ResultsBar /> should call onSortChange handler when sorting option is clicked 1`] = `
-ShallowWrapper {
-  "length": 1,
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <ResultsBar
-    count={0}
-    onSortChange={[MockFunction]}
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        <p
-          className="results-count"
-        >
-          0 movies found
-        </p>,
-        <div
-          className="results-sorting"
-        >
-          <p>
-            Sort by
-          </p>
-          <ul
-            className="sorting-options"
-          >
-            <li
-              className=""
-              onClick={[Function]}
-            >
-              <p>
-                release date
-              </p>
-            </li>
-            <li
-              className=""
-              onClick={[Function]}
-            >
-              <p>
-                rating
-              </p>
-            </li>
-          </ul>
-        </div>,
-      ],
-      "className": "results-bar",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "0 movies found",
-          "className": "results-count",
-        },
-        "ref": null,
-        "rendered": "0 movies found",
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <p>
-              Sort by
-            </p>,
-            <ul
-              className="sorting-options"
-            >
-              <li
-                className=""
-                onClick={[Function]}
-              >
-                <p>
-                  release date
-                </p>
-              </li>
-              <li
-                className=""
-                onClick={[Function]}
-              >
-                <p>
-                  rating
-                </p>
-              </li>
-            </ul>,
-          ],
-          "className": "results-sorting",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Sort by",
-            },
-            "ref": null,
-            "rendered": "Sort by",
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <li
-                  className=""
-                  onClick={[Function]}
-                >
-                  <p>
-                    release date
-                  </p>
-                </li>,
-                <li
-                  className=""
-                  onClick={[Function]}
-                >
-                  <p>
-                    rating
-                  </p>
-                </li>,
-              ],
-              "className": "sorting-options",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": "release date",
-                "nodeType": "host",
-                "props": Object {
-                  "children": <p>
-                    release date
-                  </p>,
-                  "className": "",
-                  "onClick": [Function],
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "release date",
-                  },
-                  "ref": null,
-                  "rendered": "release date",
-                  "type": "p",
-                },
-                "type": "li",
-              },
-              Object {
-                "instance": null,
-                "key": "rating",
-                "nodeType": "host",
-                "props": Object {
-                  "children": <p>
-                    rating
-                  </p>,
-                  "className": "",
-                  "onClick": [Function],
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "rating",
-                  },
-                  "ref": null,
-                  "rendered": "rating",
-                  "type": "p",
-                },
-                "type": "li",
-              },
-            ],
-            "type": "ul",
-          },
-        ],
-        "type": "div",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <p
-            className="results-count"
-          >
-            0 movies found
-          </p>,
-          <div
-            className="results-sorting"
-          >
-            <p>
-              Sort by
-            </p>
-            <ul
-              className="sorting-options"
-            >
-              <li
-                className=""
-                onClick={[Function]}
-              >
-                <p>
-                  release date
-                </p>
-              </li>
-              <li
-                className=""
-                onClick={[Function]}
-              >
-                <p>
-                  rating
-                </p>
-              </li>
-            </ul>
-          </div>,
-        ],
-        "className": "results-bar",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "0 movies found",
-            "className": "results-count",
-          },
-          "ref": null,
-          "rendered": "0 movies found",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <p>
-                Sort by
-              </p>,
-              <ul
-                className="sorting-options"
-              >
-                <li
-                  className=""
-                  onClick={[Function]}
-                >
-                  <p>
-                    release date
-                  </p>
-                </li>
-                <li
-                  className=""
-                  onClick={[Function]}
-                >
-                  <p>
-                    rating
-                  </p>
-                </li>
-              </ul>,
-            ],
-            "className": "results-sorting",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Sort by",
-              },
-              "ref": null,
-              "rendered": "Sort by",
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <li
-                    className=""
-                    onClick={[Function]}
-                  >
-                    <p>
-                      release date
-                    </p>
-                  </li>,
-                  <li
-                    className=""
-                    onClick={[Function]}
-                  >
-                    <p>
-                      rating
-                    </p>
-                  </li>,
-                ],
-                "className": "sorting-options",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": "release date",
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <p>
-                      release date
-                    </p>,
-                    "className": "",
-                    "onClick": [Function],
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "release date",
-                    },
-                    "ref": null,
-                    "rendered": "release date",
-                    "type": "p",
-                  },
-                  "type": "li",
-                },
-                Object {
-                  "instance": null,
-                  "key": "rating",
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <p>
-                      rating
-                    </p>,
-                    "className": "",
-                    "onClick": [Function],
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "rating",
-                    },
-                    "ref": null,
-                    "rendered": "rating",
-                    "type": "p",
-                  },
-                  "type": "li",
-                },
-              ],
-              "type": "ul",
-            },
-          ],
-          "type": "div",
-        },
-      ],
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-      },
-    },
-  },
-}
-`;
-
 exports[`<ResultsBar /> should render ResultsBar and match snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ResultsBar
+    changeCurrentSort={[Function]}
     count={0}
+    selectedSortName="rating"
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+    storeSubscription={
+      Subscription {
+        "listeners": Object {
+          "clear": [Function],
+          "get": [Function],
+          "notify": [Function],
+          "subscribe": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": [Function],
+      }
+    }
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -442,7 +76,7 @@ ShallowWrapper {
               </p>
             </li>
             <li
-              className=""
+              className="selected"
               onClick={[Function]}
             >
               <p>
@@ -489,7 +123,7 @@ ShallowWrapper {
                 </p>
               </li>
               <li
-                className=""
+                className="selected"
                 onClick={[Function]}
               >
                 <p>
@@ -528,7 +162,7 @@ ShallowWrapper {
                   </p>
                 </li>,
                 <li
-                  className=""
+                  className="selected"
                   onClick={[Function]}
                 >
                   <p>
@@ -573,7 +207,7 @@ ShallowWrapper {
                   "children": <p>
                     rating
                   </p>,
-                  "className": "",
+                  "className": "selected",
                   "onClick": [Function],
                 },
                 "ref": null,
@@ -629,7 +263,7 @@ ShallowWrapper {
                 </p>
               </li>
               <li
-                className=""
+                className="selected"
                 onClick={[Function]}
               >
                 <p>
@@ -676,7 +310,7 @@ ShallowWrapper {
                   </p>
                 </li>
                 <li
-                  className=""
+                  className="selected"
                   onClick={[Function]}
                 >
                   <p>
@@ -715,7 +349,7 @@ ShallowWrapper {
                     </p>
                   </li>,
                   <li
-                    className=""
+                    className="selected"
                     onClick={[Function]}
                   >
                     <p>
@@ -760,7 +394,7 @@ ShallowWrapper {
                     "children": <p>
                       rating
                     </p>,
-                    "className": "",
+                    "className": "selected",
                     "onClick": [Function],
                   },
                   "ref": null,
@@ -802,7 +436,40 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ResultsBar
-    count={5}
+    changeCurrentSort={[Function]}
+    count={0}
+    selectedSortName="rating"
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+    storeSubscription={
+      Subscription {
+        "listeners": Object {
+          "clear": [Function],
+          "get": [Function],
+          "notify": [Function],
+          "subscribe": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": [Function],
+      }
+    }
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -820,7 +487,7 @@ ShallowWrapper {
         <p
           className="results-count"
         >
-          5 movies found
+          0 movies found
         </p>,
         <div
           className="results-sorting"
@@ -840,7 +507,7 @@ ShallowWrapper {
               </p>
             </li>
             <li
-              className=""
+              className="selected"
               onClick={[Function]}
             >
               <p>
@@ -859,11 +526,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "5 movies found",
+          "children": "0 movies found",
           "className": "results-count",
         },
         "ref": null,
-        "rendered": "5 movies found",
+        "rendered": "0 movies found",
         "type": "p",
       },
       Object {
@@ -887,7 +554,7 @@ ShallowWrapper {
                 </p>
               </li>
               <li
-                className=""
+                className="selected"
                 onClick={[Function]}
               >
                 <p>
@@ -926,7 +593,7 @@ ShallowWrapper {
                   </p>
                 </li>,
                 <li
-                  className=""
+                  className="selected"
                   onClick={[Function]}
                 >
                   <p>
@@ -971,7 +638,7 @@ ShallowWrapper {
                   "children": <p>
                     rating
                   </p>,
-                  "className": "",
+                  "className": "selected",
                   "onClick": [Function],
                 },
                 "ref": null,
@@ -1007,7 +674,7 @@ ShallowWrapper {
           <p
             className="results-count"
           >
-            5 movies found
+            0 movies found
           </p>,
           <div
             className="results-sorting"
@@ -1027,7 +694,7 @@ ShallowWrapper {
                 </p>
               </li>
               <li
-                className=""
+                className="selected"
                 onClick={[Function]}
               >
                 <p>
@@ -1046,11 +713,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "5 movies found",
+            "children": "0 movies found",
             "className": "results-count",
           },
           "ref": null,
-          "rendered": "5 movies found",
+          "rendered": "0 movies found",
           "type": "p",
         },
         Object {
@@ -1074,7 +741,7 @@ ShallowWrapper {
                   </p>
                 </li>
                 <li
-                  className=""
+                  className="selected"
                   onClick={[Function]}
                 >
                   <p>
@@ -1113,7 +780,7 @@ ShallowWrapper {
                     </p>
                   </li>,
                   <li
-                    className=""
+                    className="selected"
                     onClick={[Function]}
                   >
                     <p>
@@ -1158,7 +825,7 @@ ShallowWrapper {
                     "children": <p>
                       rating
                     </p>,
-                    "className": "",
+                    "className": "selected",
                     "onClick": [Function],
                   },
                   "ref": null,

@@ -53,7 +53,7 @@ const AssetDetails = ({ asset, onSearchButtonClick }) => {
 
 AssetDetails.propTypes = {
     asset: PropTypes.object,
-    onSearchButtonClick: PropTypes.object,
+    onSearchButtonClick: PropTypes.func,
 };
 
 AssetDetails.defaultProps = {

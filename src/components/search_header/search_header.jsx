@@ -58,7 +58,7 @@ class SearchHeader extends React.Component {
             <div className="search-header">
                 <Logo />
                 <h2 className="find-movie">{FIND_MOVIE_MESSAGE}</h2>
-                <SearchInput onEnterKey={doSearch}/>
+                <SearchInput />
                 {searchActions}
             </div>
         );
@@ -68,7 +68,7 @@ class SearchHeader extends React.Component {
 SearchHeader.propTypes = {
     searchInput: PropTypes.string,
     selectedFilter: PropTypes.string,
-    selectedSort: PropTypes.string,
+    selectedSort: PropTypes.object,
     fetchSearchResults: PropTypes.func,
     changeCurrentFilter: PropTypes.func,
 };

@@ -58,7 +58,7 @@ class SearchHeader extends React.Component {
             <div className="search-header">
                 <Logo />
                 <h2 className="find-movie">{FIND_MOVIE_MESSAGE}</h2>
-                <SearchInput />
+                <SearchInput onEnterKey={doSearch} />
                 {searchActions}
             </div>
         );

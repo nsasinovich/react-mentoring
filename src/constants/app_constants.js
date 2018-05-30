@@ -4,17 +4,26 @@ export const PosterSizes = {
 };
 
 export const FilterOptions = {
-    GENRE: 'genre',
+    GENRE: 'genres',
     TITLE: 'title',
 };
 
 export const SortingOptions = {
     RELEASE: {
         name: 'release date',
-        sortingField: 'year',
+        sortField: 'year',
     },
     RATING: {
         name: 'rating',
-        sortingField: 'rating',
+        sortField: 'vote_count',
     },
+};
+
+export const INITIAL_STATE = {
+    results: [],
+    resultsCount: 0,
+    searchInput: '',
+    selectedSort: SortingOptions.RATING,
+    selectedFilter: FilterOptions.TITLE,
+    selectedMovieDetails: null,
 };

@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { setSelectedMovie } from '../../actions/actions';
 import { PosterSizes } from '../../constants/app_constants';
 import Poster from '../../components/shared/poster/poster';
 
@@ -7,19 +9,18 @@ import './asset_tile.scss';
 
 const AssetTile = (props) => {
     const {
-        posterUrl,
-        year,
-        title,
-        genre,
+        asset,
+        showMovieDetails,
     } = props;
 
-    const poster = <Poster posterSize={PosterSizes.MEDIUM} imgUrl={posterUrl} />;
+    const year = new Date(asset.release_date).getUTCFullYear();
+    const poster = <Poster posterSize={PosterSizes.MEDIUM} imgUrl={asset.poster_path} />;
 
     const info = (
         <div className="asset-info">
             <div>
-                <p className="title">{title}</p>
-                <p className="genre">{genre}</p>
+                <p className="title" onClick={() => showMovieDetails(asset)}>{asset.title}</p>
+                <p className="genre">{asset.genres[0]}</p>
             </div>
             <p className="year">{year}</p>
         </div>
@@ -35,17 +36,13 @@ const AssetTile = (props) => {
 
 
 AssetTile.propTypes = {
-    posterUrl: PropTypes.string,
-    year: PropTypes.number,
-    title: PropTypes.string,
-    genre: PropTypes.string,
+    asset: PropTypes.object,
+    showMovieDetails: PropTypes.func,
 };
 
-// will be removed later
-AssetTile.defaultProps = {
-    year: 1995,
-    title: 'Pulp Fiction',
-    genre: 'Oscar-winning movies',
+const mapDispatchToProps = {
+    showMovieDetails: setSelectedMovie,
 };
 
-export default AssetTile;
+export default connect(null, mapDispatchToProps)(AssetTile);
+

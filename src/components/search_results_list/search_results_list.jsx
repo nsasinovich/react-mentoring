@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import AssetTile from '../asset_tile/asset_tile';
 import NoResults from '../no_results/no_results';
 import SearchResultsErrorBoundary from './search_results_error_boundary/search_results_error_boundary';
@@ -7,15 +8,16 @@ import SearchResultsErrorBoundary from './search_results_error_boundary/search_r
 import './search_results_list.scss';
 
 const SearchResultsList = ({ results, sortField }) => {
-    const sortedResults = results.sort((res1, res2) => res2[sortField] - res1[sortField]);
+    const formattedResults = results.map((res) => {
+        res.year = new Date(res.release_date).getUTCFullYear();
+        return res;
+    });
+    const sortedResults = formattedResults.sort((res1, res2) => res2[sortField] - res1[sortField]);
 
     const children = sortedResults.length ? sortedResults.map(asset => (
         <AssetTile
             key={asset.title}
-            title={asset.title}
-            posterUrl={asset.posterUrl}
-            year={asset.year}
-            genre={asset.genre}
+            asset={asset}
         />
     )) : <NoResults />;
 
@@ -37,4 +39,9 @@ SearchResultsList.defaultProps = {
     results: [],
 };
 
-export default SearchResultsList;
+const mapStateToProps = state => ({
+    results: state.results,
+    sortField: state.selectedSort.sortField,
+});
+
+export default connect(mapStateToProps)(SearchResultsList);

@@ -5,12 +5,26 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <AssetDetails
-    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    duration={113}
-    genre="Oscar-winning Movies"
-    rating={4.7}
-    title="Pulp Fiction"
-    year={1995}
+    asset={
+      Object {
+        "genres": Array [
+          "genre1",
+          "genre2",
+        ],
+        "poster_path": "poster_path",
+      }
+    }
+    onSearchButtonClick={[Function]}
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -33,6 +47,7 @@ ShallowWrapper {
           />
           <Button
             buttonClass="search-button button-white"
+            onClick={[Function]}
           >
             Search
           </Button>
@@ -41,7 +56,7 @@ ShallowWrapper {
           className="asset-details"
         >
           <Poster
-            imgUrl="test-file-stub"
+            imgUrl="poster_path"
             posterSize="poster-large"
           />
           <div
@@ -52,19 +67,15 @@ ShallowWrapper {
             >
               <p
                 className="title"
-              >
-                Pulp Fiction
-              </p>
+              />
               <p
                 className="rating"
-              >
-                4.7
-              </p>
+              />
             </div>
             <p
               className="genre"
             >
-              Oscar-winning Movies
+              genre1, genre2
             </p>
             <div
               className="wrapper"
@@ -72,19 +83,15 @@ ShallowWrapper {
               <p
                 className="year"
               >
-                1995
+                NaN
               </p>
               <p
                 className="duration"
-              >
-                113 min
-              </p>
+              />
             </div>
             <p
               className="description"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            />
           </div>
         </div>,
       ],
@@ -103,6 +110,7 @@ ShallowWrapper {
             />,
             <Button
               buttonClass="search-button button-white"
+              onClick={[Function]}
             >
               Search
             </Button>,
@@ -129,6 +137,7 @@ ShallowWrapper {
             "props": Object {
               "buttonClass": "search-button button-white",
               "children": "Search",
+              "onClick": [Function],
             },
             "ref": null,
             "rendered": "Search",
@@ -144,7 +153,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Poster
-              imgUrl="test-file-stub"
+              imgUrl="poster_path"
               posterSize="poster-large"
             />,
             <div
@@ -155,19 +164,15 @@ ShallowWrapper {
               >
                 <p
                   className="title"
-                >
-                  Pulp Fiction
-                </p>
+                />
                 <p
                   className="rating"
-                >
-                  4.7
-                </p>
+                />
               </div>
               <p
                 className="genre"
               >
-                Oscar-winning Movies
+                genre1, genre2
               </p>
               <div
                 className="wrapper"
@@ -175,19 +180,15 @@ ShallowWrapper {
                 <p
                   className="year"
                 >
-                  1995
+                  NaN
                 </p>
                 <p
                   className="duration"
-                >
-                  113 min
-                </p>
+                />
               </div>
               <p
                 className="description"
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
+              />
             </div>,
           ],
           "className": "asset-details",
@@ -199,7 +200,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "imgUrl": "test-file-stub",
+              "imgUrl": "poster_path",
               "posterSize": "poster-large",
             },
             "ref": null,
@@ -217,19 +218,15 @@ ShallowWrapper {
                 >
                   <p
                     className="title"
-                  >
-                    Pulp Fiction
-                  </p>
+                  />
                   <p
                     className="rating"
-                  >
-                    4.7
-                  </p>
+                  />
                 </div>,
                 <p
                   className="genre"
                 >
-                  Oscar-winning Movies
+                  genre1, genre2
                 </p>,
                 <div
                   className="wrapper"
@@ -237,19 +234,15 @@ ShallowWrapper {
                   <p
                     className="year"
                   >
-                    1995
+                    NaN
                   </p>
                   <p
                     className="duration"
-                  >
-                    113 min
-                  </p>
+                  />
                 </div>,
                 <p
                   className="description"
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>,
+                />,
               ],
               "className": "asset-info",
             },
@@ -263,14 +256,10 @@ ShallowWrapper {
                   "children": Array [
                     <p
                       className="title"
-                    >
-                      Pulp Fiction
-                    </p>,
+                    />,
                     <p
                       className="rating"
-                    >
-                      4.7
-                    </p>,
+                    />,
                   ],
                   "className": "wrapper",
                 },
@@ -281,11 +270,11 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "Pulp Fiction",
+                      "children": undefined,
                       "className": "title",
                     },
                     "ref": null,
-                    "rendered": "Pulp Fiction",
+                    "rendered": null,
                     "type": "p",
                   },
                   Object {
@@ -293,11 +282,11 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": 4.7,
+                      "children": undefined,
                       "className": "rating",
                     },
                     "ref": null,
-                    "rendered": 4.7,
+                    "rendered": null,
                     "type": "p",
                   },
                 ],
@@ -308,11 +297,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Oscar-winning Movies",
+                  "children": "genre1, genre2",
                   "className": "genre",
                 },
                 "ref": null,
-                "rendered": "Oscar-winning Movies",
+                "rendered": "genre1, genre2",
                 "type": "p",
               },
               Object {
@@ -324,13 +313,11 @@ ShallowWrapper {
                     <p
                       className="year"
                     >
-                      1995
+                      NaN
                     </p>,
                     <p
                       className="duration"
-                    >
-                      113 min
-                    </p>,
+                    />,
                   ],
                   "className": "wrapper",
                 },
@@ -341,11 +328,11 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": 1995,
+                      "children": NaN,
                       "className": "year",
                     },
                     "ref": null,
-                    "rendered": 1995,
+                    "rendered": NaN,
                     "type": "p",
                   },
                   Object {
@@ -353,11 +340,11 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "113 min",
+                      "children": null,
                       "className": "duration",
                     },
                     "ref": null,
-                    "rendered": "113 min",
+                    "rendered": null,
                     "type": "p",
                   },
                 ],
@@ -368,11 +355,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                  "children": undefined,
                   "className": "description",
                 },
                 "ref": null,
-                "rendered": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "rendered": null,
                 "type": "p",
               },
             ],
@@ -399,6 +386,7 @@ ShallowWrapper {
             />
             <Button
               buttonClass="search-button button-white"
+              onClick={[Function]}
             >
               Search
             </Button>
@@ -407,7 +395,7 @@ ShallowWrapper {
             className="asset-details"
           >
             <Poster
-              imgUrl="test-file-stub"
+              imgUrl="poster_path"
               posterSize="poster-large"
             />
             <div
@@ -418,19 +406,15 @@ ShallowWrapper {
               >
                 <p
                   className="title"
-                >
-                  Pulp Fiction
-                </p>
+                />
                 <p
                   className="rating"
-                >
-                  4.7
-                </p>
+                />
               </div>
               <p
                 className="genre"
               >
-                Oscar-winning Movies
+                genre1, genre2
               </p>
               <div
                 className="wrapper"
@@ -438,19 +422,15 @@ ShallowWrapper {
                 <p
                   className="year"
                 >
-                  1995
+                  NaN
                 </p>
                 <p
                   className="duration"
-                >
-                  113 min
-                </p>
+                />
               </div>
               <p
                 className="description"
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
+              />
             </div>
           </div>,
         ],
@@ -469,6 +449,7 @@ ShallowWrapper {
               />,
               <Button
                 buttonClass="search-button button-white"
+                onClick={[Function]}
               >
                 Search
               </Button>,
@@ -495,6 +476,7 @@ ShallowWrapper {
               "props": Object {
                 "buttonClass": "search-button button-white",
                 "children": "Search",
+                "onClick": [Function],
               },
               "ref": null,
               "rendered": "Search",
@@ -510,7 +492,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Poster
-                imgUrl="test-file-stub"
+                imgUrl="poster_path"
                 posterSize="poster-large"
               />,
               <div
@@ -521,19 +503,15 @@ ShallowWrapper {
                 >
                   <p
                     className="title"
-                  >
-                    Pulp Fiction
-                  </p>
+                  />
                   <p
                     className="rating"
-                  >
-                    4.7
-                  </p>
+                  />
                 </div>
                 <p
                   className="genre"
                 >
-                  Oscar-winning Movies
+                  genre1, genre2
                 </p>
                 <div
                   className="wrapper"
@@ -541,19 +519,15 @@ ShallowWrapper {
                   <p
                     className="year"
                   >
-                    1995
+                    NaN
                   </p>
                   <p
                     className="duration"
-                  >
-                    113 min
-                  </p>
+                  />
                 </div>
                 <p
                   className="description"
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+                />
               </div>,
             ],
             "className": "asset-details",
@@ -565,7 +539,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "imgUrl": "test-file-stub",
+                "imgUrl": "poster_path",
                 "posterSize": "poster-large",
               },
               "ref": null,
@@ -583,19 +557,15 @@ ShallowWrapper {
                   >
                     <p
                       className="title"
-                    >
-                      Pulp Fiction
-                    </p>
+                    />
                     <p
                       className="rating"
-                    >
-                      4.7
-                    </p>
+                    />
                   </div>,
                   <p
                     className="genre"
                   >
-                    Oscar-winning Movies
+                    genre1, genre2
                   </p>,
                   <div
                     className="wrapper"
@@ -603,19 +573,15 @@ ShallowWrapper {
                     <p
                       className="year"
                     >
-                      1995
+                      NaN
                     </p>
                     <p
                       className="duration"
-                    >
-                      113 min
-                    </p>
+                    />
                   </div>,
                   <p
                     className="description"
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>,
+                  />,
                 ],
                 "className": "asset-info",
               },
@@ -629,14 +595,10 @@ ShallowWrapper {
                     "children": Array [
                       <p
                         className="title"
-                      >
-                        Pulp Fiction
-                      </p>,
+                      />,
                       <p
                         className="rating"
-                      >
-                        4.7
-                      </p>,
+                      />,
                     ],
                     "className": "wrapper",
                   },
@@ -647,11 +609,11 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "Pulp Fiction",
+                        "children": undefined,
                         "className": "title",
                       },
                       "ref": null,
-                      "rendered": "Pulp Fiction",
+                      "rendered": null,
                       "type": "p",
                     },
                     Object {
@@ -659,11 +621,11 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": 4.7,
+                        "children": undefined,
                         "className": "rating",
                       },
                       "ref": null,
-                      "rendered": 4.7,
+                      "rendered": null,
                       "type": "p",
                     },
                   ],
@@ -674,11 +636,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Oscar-winning Movies",
+                    "children": "genre1, genre2",
                     "className": "genre",
                   },
                   "ref": null,
-                  "rendered": "Oscar-winning Movies",
+                  "rendered": "genre1, genre2",
                   "type": "p",
                 },
                 Object {
@@ -690,13 +652,11 @@ ShallowWrapper {
                       <p
                         className="year"
                       >
-                        1995
+                        NaN
                       </p>,
                       <p
                         className="duration"
-                      >
-                        113 min
-                      </p>,
+                      />,
                     ],
                     "className": "wrapper",
                   },
@@ -707,11 +667,11 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": 1995,
+                        "children": NaN,
                         "className": "year",
                       },
                       "ref": null,
-                      "rendered": 1995,
+                      "rendered": NaN,
                       "type": "p",
                     },
                     Object {
@@ -719,11 +679,11 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "113 min",
+                        "children": null,
                         "className": "duration",
                       },
                       "ref": null,
-                      "rendered": "113 min",
+                      "rendered": null,
                       "type": "p",
                     },
                   ],
@@ -734,11 +694,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                    "children": undefined,
                     "className": "description",
                   },
                   "ref": null,
-                  "rendered": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                  "rendered": null,
                   "type": "p",
                 },
               ],
@@ -766,12 +726,26 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <AssetDetails
-    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    duration={113}
-    genre="Oscar-winning Movies"
-    rating={4.7}
-    title="Pulp Fiction"
-    year={1995}
+    asset={
+      Object {
+        "genres": Array [
+          "genre1",
+          "genre2",
+        ],
+        "poster_path": "poster_path",
+      }
+    }
+    onSearchButtonClick={[Function]}
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -794,6 +768,7 @@ ShallowWrapper {
           />
           <Button
             buttonClass="search-button button-white"
+            onClick={[Function]}
           >
             Search
           </Button>
@@ -802,7 +777,7 @@ ShallowWrapper {
           className="asset-details"
         >
           <Poster
-            imgUrl="test-file-stub"
+            imgUrl="poster_path"
             posterSize="poster-large"
           />
           <div
@@ -813,19 +788,15 @@ ShallowWrapper {
             >
               <p
                 className="title"
-              >
-                Pulp Fiction
-              </p>
+              />
               <p
                 className="rating"
-              >
-                4.7
-              </p>
+              />
             </div>
             <p
               className="genre"
             >
-              Oscar-winning Movies
+              genre1, genre2
             </p>
             <div
               className="wrapper"
@@ -833,19 +804,15 @@ ShallowWrapper {
               <p
                 className="year"
               >
-                1995
+                NaN
               </p>
               <p
                 className="duration"
-              >
-                113 min
-              </p>
+              />
             </div>
             <p
               className="description"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            />
           </div>
         </div>,
       ],
@@ -864,6 +831,7 @@ ShallowWrapper {
             />,
             <Button
               buttonClass="search-button button-white"
+              onClick={[Function]}
             >
               Search
             </Button>,
@@ -890,6 +858,7 @@ ShallowWrapper {
             "props": Object {
               "buttonClass": "search-button button-white",
               "children": "Search",
+              "onClick": [Function],
             },
             "ref": null,
             "rendered": "Search",
@@ -905,7 +874,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Poster
-              imgUrl="test-file-stub"
+              imgUrl="poster_path"
               posterSize="poster-large"
             />,
             <div
@@ -916,19 +885,15 @@ ShallowWrapper {
               >
                 <p
                   className="title"
-                >
-                  Pulp Fiction
-                </p>
+                />
                 <p
                   className="rating"
-                >
-                  4.7
-                </p>
+                />
               </div>
               <p
                 className="genre"
               >
-                Oscar-winning Movies
+                genre1, genre2
               </p>
               <div
                 className="wrapper"
@@ -936,19 +901,15 @@ ShallowWrapper {
                 <p
                   className="year"
                 >
-                  1995
+                  NaN
                 </p>
                 <p
                   className="duration"
-                >
-                  113 min
-                </p>
+                />
               </div>
               <p
                 className="description"
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
+              />
             </div>,
           ],
           "className": "asset-details",
@@ -960,7 +921,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "imgUrl": "test-file-stub",
+              "imgUrl": "poster_path",
               "posterSize": "poster-large",
             },
             "ref": null,
@@ -978,19 +939,15 @@ ShallowWrapper {
                 >
                   <p
                     className="title"
-                  >
-                    Pulp Fiction
-                  </p>
+                  />
                   <p
                     className="rating"
-                  >
-                    4.7
-                  </p>
+                  />
                 </div>,
                 <p
                   className="genre"
                 >
-                  Oscar-winning Movies
+                  genre1, genre2
                 </p>,
                 <div
                   className="wrapper"
@@ -998,19 +955,15 @@ ShallowWrapper {
                   <p
                     className="year"
                   >
-                    1995
+                    NaN
                   </p>
                   <p
                     className="duration"
-                  >
-                    113 min
-                  </p>
+                  />
                 </div>,
                 <p
                   className="description"
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>,
+                />,
               ],
               "className": "asset-info",
             },
@@ -1024,14 +977,10 @@ ShallowWrapper {
                   "children": Array [
                     <p
                       className="title"
-                    >
-                      Pulp Fiction
-                    </p>,
+                    />,
                     <p
                       className="rating"
-                    >
-                      4.7
-                    </p>,
+                    />,
                   ],
                   "className": "wrapper",
                 },
@@ -1042,11 +991,11 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "Pulp Fiction",
+                      "children": undefined,
                       "className": "title",
                     },
                     "ref": null,
-                    "rendered": "Pulp Fiction",
+                    "rendered": null,
                     "type": "p",
                   },
                   Object {
@@ -1054,11 +1003,11 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": 4.7,
+                      "children": undefined,
                       "className": "rating",
                     },
                     "ref": null,
-                    "rendered": 4.7,
+                    "rendered": null,
                     "type": "p",
                   },
                 ],
@@ -1069,11 +1018,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Oscar-winning Movies",
+                  "children": "genre1, genre2",
                   "className": "genre",
                 },
                 "ref": null,
-                "rendered": "Oscar-winning Movies",
+                "rendered": "genre1, genre2",
                 "type": "p",
               },
               Object {
@@ -1085,13 +1034,11 @@ ShallowWrapper {
                     <p
                       className="year"
                     >
-                      1995
+                      NaN
                     </p>,
                     <p
                       className="duration"
-                    >
-                      113 min
-                    </p>,
+                    />,
                   ],
                   "className": "wrapper",
                 },
@@ -1102,11 +1049,11 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": 1995,
+                      "children": NaN,
                       "className": "year",
                     },
                     "ref": null,
-                    "rendered": 1995,
+                    "rendered": NaN,
                     "type": "p",
                   },
                   Object {
@@ -1114,11 +1061,11 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "113 min",
+                      "children": null,
                       "className": "duration",
                     },
                     "ref": null,
-                    "rendered": "113 min",
+                    "rendered": null,
                     "type": "p",
                   },
                 ],
@@ -1129,11 +1076,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                  "children": undefined,
                   "className": "description",
                 },
                 "ref": null,
-                "rendered": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "rendered": null,
                 "type": "p",
               },
             ],
@@ -1160,6 +1107,7 @@ ShallowWrapper {
             />
             <Button
               buttonClass="search-button button-white"
+              onClick={[Function]}
             >
               Search
             </Button>
@@ -1168,7 +1116,7 @@ ShallowWrapper {
             className="asset-details"
           >
             <Poster
-              imgUrl="test-file-stub"
+              imgUrl="poster_path"
               posterSize="poster-large"
             />
             <div
@@ -1179,19 +1127,15 @@ ShallowWrapper {
               >
                 <p
                   className="title"
-                >
-                  Pulp Fiction
-                </p>
+                />
                 <p
                   className="rating"
-                >
-                  4.7
-                </p>
+                />
               </div>
               <p
                 className="genre"
               >
-                Oscar-winning Movies
+                genre1, genre2
               </p>
               <div
                 className="wrapper"
@@ -1199,19 +1143,15 @@ ShallowWrapper {
                 <p
                   className="year"
                 >
-                  1995
+                  NaN
                 </p>
                 <p
                   className="duration"
-                >
-                  113 min
-                </p>
+                />
               </div>
               <p
                 className="description"
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
+              />
             </div>
           </div>,
         ],
@@ -1230,6 +1170,7 @@ ShallowWrapper {
               />,
               <Button
                 buttonClass="search-button button-white"
+                onClick={[Function]}
               >
                 Search
               </Button>,
@@ -1256,6 +1197,7 @@ ShallowWrapper {
               "props": Object {
                 "buttonClass": "search-button button-white",
                 "children": "Search",
+                "onClick": [Function],
               },
               "ref": null,
               "rendered": "Search",
@@ -1271,7 +1213,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Poster
-                imgUrl="test-file-stub"
+                imgUrl="poster_path"
                 posterSize="poster-large"
               />,
               <div
@@ -1282,19 +1224,15 @@ ShallowWrapper {
                 >
                   <p
                     className="title"
-                  >
-                    Pulp Fiction
-                  </p>
+                  />
                   <p
                     className="rating"
-                  >
-                    4.7
-                  </p>
+                  />
                 </div>
                 <p
                   className="genre"
                 >
-                  Oscar-winning Movies
+                  genre1, genre2
                 </p>
                 <div
                   className="wrapper"
@@ -1302,19 +1240,15 @@ ShallowWrapper {
                   <p
                     className="year"
                   >
-                    1995
+                    NaN
                   </p>
                   <p
                     className="duration"
-                  >
-                    113 min
-                  </p>
+                  />
                 </div>
                 <p
                   className="description"
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+                />
               </div>,
             ],
             "className": "asset-details",
@@ -1326,7 +1260,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "imgUrl": "test-file-stub",
+                "imgUrl": "poster_path",
                 "posterSize": "poster-large",
               },
               "ref": null,
@@ -1344,19 +1278,15 @@ ShallowWrapper {
                   >
                     <p
                       className="title"
-                    >
-                      Pulp Fiction
-                    </p>
+                    />
                     <p
                       className="rating"
-                    >
-                      4.7
-                    </p>
+                    />
                   </div>,
                   <p
                     className="genre"
                   >
-                    Oscar-winning Movies
+                    genre1, genre2
                   </p>,
                   <div
                     className="wrapper"
@@ -1364,19 +1294,15 @@ ShallowWrapper {
                     <p
                       className="year"
                     >
-                      1995
+                      NaN
                     </p>
                     <p
                       className="duration"
-                    >
-                      113 min
-                    </p>
+                    />
                   </div>,
                   <p
                     className="description"
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>,
+                  />,
                 ],
                 "className": "asset-info",
               },
@@ -1390,14 +1316,10 @@ ShallowWrapper {
                     "children": Array [
                       <p
                         className="title"
-                      >
-                        Pulp Fiction
-                      </p>,
+                      />,
                       <p
                         className="rating"
-                      >
-                        4.7
-                      </p>,
+                      />,
                     ],
                     "className": "wrapper",
                   },
@@ -1408,11 +1330,11 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "Pulp Fiction",
+                        "children": undefined,
                         "className": "title",
                       },
                       "ref": null,
-                      "rendered": "Pulp Fiction",
+                      "rendered": null,
                       "type": "p",
                     },
                     Object {
@@ -1420,11 +1342,11 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": 4.7,
+                        "children": undefined,
                         "className": "rating",
                       },
                       "ref": null,
-                      "rendered": 4.7,
+                      "rendered": null,
                       "type": "p",
                     },
                   ],
@@ -1435,11 +1357,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Oscar-winning Movies",
+                    "children": "genre1, genre2",
                     "className": "genre",
                   },
                   "ref": null,
-                  "rendered": "Oscar-winning Movies",
+                  "rendered": "genre1, genre2",
                   "type": "p",
                 },
                 Object {
@@ -1451,13 +1373,11 @@ ShallowWrapper {
                       <p
                         className="year"
                       >
-                        1995
+                        NaN
                       </p>,
                       <p
                         className="duration"
-                      >
-                        113 min
-                      </p>,
+                      />,
                     ],
                     "className": "wrapper",
                   },
@@ -1468,11 +1388,11 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": 1995,
+                        "children": NaN,
                         "className": "year",
                       },
                       "ref": null,
-                      "rendered": 1995,
+                      "rendered": NaN,
                       "type": "p",
                     },
                     Object {
@@ -1480,11 +1400,11 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "113 min",
+                        "children": null,
                         "className": "duration",
                       },
                       "ref": null,
-                      "rendered": "113 min",
+                      "rendered": null,
                       "type": "p",
                     },
                   ],
@@ -1495,11 +1415,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                    "children": undefined,
                     "className": "description",
                   },
                   "ref": null,
-                  "rendered": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                  "rendered": null,
                   "type": "p",
                 },
               ],

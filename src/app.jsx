@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './app.scss';
 import Footer from './components/footer/footer';
 import SearchContainer from './components/search_container/search_container';
@@ -11,13 +12,16 @@ export default class App extends React.Component {
         return (
             <div className="app">
                 <div className="content-wrapper">
-                    <SearchContainer />
+                    {/* <SearchContainer /> */}
+                    {this.props.children}
                 </div>
 
                 <Footer />
-                {/* <AssetDetails /> */}
-                {/* <NoResults /> */}
             </div>
         );
     }
 }
+
+App.propTypes = {
+    children: PropTypes.element,
+};

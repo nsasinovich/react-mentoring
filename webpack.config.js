@@ -11,6 +11,7 @@ module.exports = (env, options) => {
         output: {
             path: `${__dirname}/public`,
             filename: 'bundle.js',
+            publicPath: '/',
         },
 
         module: {

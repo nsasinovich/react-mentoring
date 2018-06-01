@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 import classNames from 'classnames';
 import Logo from '../shared/logo/logo';
 import SearchInput from './search_input/search_input';
@@ -23,7 +24,10 @@ class SearchHeader extends React.Component {
             fetchSearchResults,
         } = this.props;
 
-        const doSearch = () => fetchSearchResults({ searchInput, selectedFilter, selectedSort });
+        const doSearch = () => {
+            this.props.history.push(`/search?search=${searchInput}&searchBy=${selectedFilter}`);
+            fetchSearchResults({ searchInput, selectedFilter, selectedSort });
+        };
 
         const filterOptions = Object.values(FilterOptions).map((filter) => {
             const classes = classNames('filter-button', {
@@ -71,6 +75,7 @@ SearchHeader.propTypes = {
     selectedSort: PropTypes.object,
     fetchSearchResults: PropTypes.func,
     changeCurrentFilter: PropTypes.func,
+    history: PropTypes.object,
 };
 
 const mapStateToProps = state => ({
@@ -84,4 +89,4 @@ const mapDispatchToProps = {
     changeCurrentFilter: changeFilter,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchHeader);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SearchHeader));

@@ -1,4 +1,5 @@
 import ActionTypes from '../constants/action_types';
+import { ENDPOINT } from '../constants/app_constants';
 
 // ACTION CREATORS
 export const changeSort = sort => ({
@@ -32,10 +33,9 @@ export const resetSelectedMovie = () => ({
 
 // ACTIONS
 export const fetchResults = ({ searchInput, selectedFilter }) => (dispatch) => {
-    const endpoint = 'http://react-cdp-api.herokuapp.com';
     const searchQuery = `search=${searchInput}&searchBy=${selectedFilter}`;
 
-    return fetch(`${endpoint}/movies?${searchQuery}`)
+    return fetch(`${ENDPOINT}/movies?${searchQuery}`)
         .then(response => response.json())
         .then(json => dispatch(updateResults(json)))
         .catch((e) => {
@@ -46,4 +46,16 @@ export const fetchResults = ({ searchInput, selectedFilter }) => (dispatch) => {
             }));
         });
 };
+
+export const loadAsset = assetId => dispatch =>
+    fetch(`${ENDPOINT}/movies/${assetId}`)
+        .then(response => response.json())
+        .then(json => dispatch(setSelectedMovie(json)))
+        .catch((e) => {
+            console.error('AssetDetails', 'loadAsset()', e);
+
+            return dispatch(setSelectedMovie({
+                movie: {},
+            }));
+        });
 

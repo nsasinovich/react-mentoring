@@ -26,7 +26,7 @@ ReactDOM.render(
                     <Switch>
                         <Redirect exact from="/" to="/search" />
 
-                        <Route path="/search">
+                        <Route exact path="/search">
                             <SearchContainer>
                                 <SearchHeader />
                             </SearchContainer>

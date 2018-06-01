@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import Poster from '../shared/poster/poster';
 import Logo from '../shared/logo/logo';
 import Button from '../shared/button/button';
@@ -17,7 +18,9 @@ const AssetDetails = ({ asset, onSearchButtonClick }) => {
     const header = (
         <div className="asset-details-header">
             <Logo className="asset-details-logo"/>
-            <Button buttonClass="search-button button-white" onClick={onSearchButtonClick}>Search</Button>
+            <Link to='/search'>
+                <Button buttonClass="search-button button-white" onClick={onSearchButtonClick}>Search</Button>
+            </Link>
         </div>
     );
 
@@ -64,4 +67,9 @@ const mapDispatchToProps = {
     onSearchButtonClick: resetSelectedMovie,
 };
 
-export default connect(null, mapDispatchToProps)(AssetDetails);
+const mapStateToProps = state => ({
+    asset: state.selectedMovieDetails,
+});
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(AssetDetails);

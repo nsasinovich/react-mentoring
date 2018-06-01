@@ -41,9 +41,8 @@ export const fetchResults = ({ searchInput, selectedFilter }) => (dispatch) => {
         .catch((e) => {
             console.error('SearchHeader', 'findMovies()', e);
 
-            return dispatch(updateResults({
-                results: [],
-                resultsCount: 0,
+            return dispatch(updateSearchInput({
+                input: '',
             }));
         });
 };

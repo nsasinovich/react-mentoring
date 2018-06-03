@@ -1,3 +1,5 @@
+export const ENDPOINT = 'http://react-cdp-api.herokuapp.com';
+
 export const PosterSizes = {
     LARGE: 'poster-large',
     MEDIUM: 'poster-medium',
@@ -25,5 +27,5 @@ export const INITIAL_STATE = {
     searchInput: '',
     selectedSort: SortingOptions.RATING,
     selectedFilter: FilterOptions.TITLE,
-    selectedMovieDetails: null,
+    selectedMovieDetails: {},
 };

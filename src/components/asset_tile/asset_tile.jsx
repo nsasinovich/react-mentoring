@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { setSelectedMovie } from '../../actions/actions';
 import { PosterSizes } from '../../constants/app_constants';
 import Poster from '../../components/shared/poster/poster';
@@ -10,7 +11,7 @@ import './asset_tile.scss';
 const AssetTile = (props) => {
     const {
         asset,
-        showMovieDetails,
+        setMovieDetails,
     } = props;
 
     const year = new Date(asset.release_date).getUTCFullYear();
@@ -19,7 +20,9 @@ const AssetTile = (props) => {
     const info = (
         <div className="asset-info">
             <div>
-                <p className="title" onClick={() => showMovieDetails(asset)}>{asset.title}</p>
+                <Link className="title" to={`/details/${asset.id}`}>
+                    <p onClick={() => setMovieDetails(asset)}>{asset.title}</p>
+                </Link>
                 <p className="genre">{asset.genres[0]}</p>
             </div>
             <p className="year">{year}</p>
@@ -37,11 +40,11 @@ const AssetTile = (props) => {
 
 AssetTile.propTypes = {
     asset: PropTypes.object,
-    showMovieDetails: PropTypes.func,
+    setMovieDetails: PropTypes.func,
 };
 
 const mapDispatchToProps = {
-    showMovieDetails: setSelectedMovie,
+    setMovieDetails: setSelectedMovie,
 };
 
 export default connect(null, mapDispatchToProps)(AssetTile);

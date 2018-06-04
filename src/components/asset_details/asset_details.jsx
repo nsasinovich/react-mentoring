@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Poster from '../shared/poster/poster';
 import Logo from '../shared/logo/logo';
 import Button from '../shared/button/button';
-import { resetSelectedMovie, loadAsset } from '../../actions/actions';
+import { resetSelectedMovie, fetchMovieById } from '../../actions/actions';
 import { PosterSizes } from '../../constants/app_constants';
 
 import './asset_details.scss';
@@ -15,7 +15,7 @@ class AssetDetails extends React.Component {
     componentWillMount() {
         const { assetId } = this.props.match.params;
         if (this.props.asset.id !== assetId) {
-            this.props.loadAssetDetails(assetId);
+            this.props.fetchAssetDetails(assetId);
         }
     }
 
@@ -68,7 +68,7 @@ class AssetDetails extends React.Component {
 AssetDetails.propTypes = {
     asset: PropTypes.object,
     onSearchButtonClick: PropTypes.func,
-    loadAssetDetails: PropTypes.func,
+    fetchAssetDetails: PropTypes.func,
 };
 
 AssetDetails.defaultProps = {
@@ -77,7 +77,7 @@ AssetDetails.defaultProps = {
 
 const mapDispatchToProps = {
     onSearchButtonClick: resetSelectedMovie,
-    loadAssetDetails: loadAsset,
+    fetchAssetDetails: fetchMovieById,
 };
 
 const mapStateToProps = state => ({

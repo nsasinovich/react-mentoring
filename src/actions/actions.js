@@ -1,3 +1,4 @@
+import { call, put, takeLatest } from 'redux-saga/effects';
 import ActionTypes from '../constants/action_types';
 import { ENDPOINT } from '../constants/app_constants';
 
@@ -31,31 +32,42 @@ export const resetSelectedMovie = () => ({
     type: ActionTypes.RESET_SELECTED_MOVIE,
 });
 
+export const fetchResults = ({ searchInput, selectedFilter }) => ({
+    type: ActionTypes.FETCH_RESULTS,
+    payload: {
+        searchInput,
+        selectedFilter,
+    },
+});
+
+export const fetchMovieById = assetId => ({
+    type: ActionTypes.FETCH_MOVIE_BY_ID,
+    assetId,
+});
+
 // ACTIONS
-export const fetchResults = ({ searchInput, selectedFilter }) => (dispatch) => {
+export function* fetchResultsAsync(action) {
+    const { searchInput, selectedFilter } = action.payload;
     const searchQuery = `search=${searchInput}&searchBy=${selectedFilter}`;
 
-    return fetch(`${ENDPOINT}/movies?${searchQuery}`)
-        .then(response => response.json())
-        .then(json => dispatch(updateResults(json)))
-        .catch((e) => {
-            console.error('SearchHeader', 'findMovies()', e);
+    const response = yield call(fetch, `${ENDPOINT}/movies?${searchQuery}`);
+    const results = yield response.json();
 
-            return dispatch(updateSearchInput({
-                input: '',
-            }));
-        });
-};
+    yield put(updateResults(results));
+}
 
-export const loadAsset = assetId => dispatch =>
-    fetch(`${ENDPOINT}/movies/${assetId}`)
-        .then(response => response.json())
-        .then(json => dispatch(setSelectedMovie(json)))
-        .catch((e) => {
-            console.error('AssetDetails', 'loadAsset()', e);
+export function* watchFetchResults() {
+    yield takeLatest(ActionTypes.FETCH_RESULTS, fetchResultsAsync);
+}
 
-            return dispatch(setSelectedMovie({
-                movie: {},
-            }));
-        });
+export function* fetchMovieByIdAsync(action) {
+    const response = yield call(fetch, `${ENDPOINT}/movies/${action.assetId}`);
+    const asset = yield response.json();
+
+    yield put(setSelectedMovie(asset));
+}
+
+export function* watchFetchMovieById() {
+    yield takeLatest(ActionTypes.FETCH_MOVIE_BY_ID, fetchMovieByIdAsync);
+}
 

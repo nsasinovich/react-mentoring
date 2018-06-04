@@ -19,10 +19,10 @@ class SearchHeader extends React.Component {
     componentWillMount() {
         const params = new URLSearchParams(this.props.location.search);
 
-        this.props.updateSearchInputValue(params.get('search'));
+        this.props.updateSearchInputValue(params.get('search') || '');
         this.props.fetchSearchResults({
             searchInput: params.get('search') || '',
-            selectedFilter: params.get('searchBy'),
+            selectedFilter: params.get('searchBy') || this.props.selectedFilter,
         });
     }
 

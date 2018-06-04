@@ -1,17 +1,25 @@
 const express = require('express');
-const path = require('path');
-
-const history = require('connect-history-api-fallback');
 
 const app = express();
-app.use(history());
 
-app.use('/', express.static(path.join(__dirname, '../public')));
+if (process.env.NODE_ENV === 'development') {
+    const webpack = require('webpack');
+    const webpackDevMiddleware = require('webpack-dev-middleware');
+    const webpackHotMiddleware = require('webpack-hot-middleware');
+    const webpackHotServerMiddleware = require('webpack-hot-server-middleware');
+    const webpackConfig = require('../webpack');
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
-});
+    const compiler = webpack(webpackConfig);
 
-app.listen(3000, () => {
-    console.log('Listening on port 3000...');
-});
+    app.use(webpackDevMiddleware(compiler));
+    app.use(webpackHotMiddleware(compiler.compilers.find(c => c.name === 'client')));
+    app.use(webpackHotServerMiddleware(compiler));
+} else {
+    const location = '../public/js/serverRenderer';
+    const serverRenderer = require(location).default;
+
+    app.use(express.static('public'));
+    app.use(serverRenderer());
+}
+
+module.exports = app;

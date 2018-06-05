@@ -21,7 +21,7 @@ class AssetDetails extends React.Component {
 
     render() {
         const { asset, onSearchButtonClick } = this.props;
-        const year = new Date(asset.release_date).getUTCFullYear();
+        const year = asset.release_date && new Date(asset.release_date).getUTCFullYear();
         const runtime = asset.runtime ? `${asset.runtime} min` : null;
         const genres = asset.genres && asset.genres.join(', ');
 

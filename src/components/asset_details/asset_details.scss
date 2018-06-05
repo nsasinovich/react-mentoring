@@ -5,12 +5,12 @@ $asset-details-height: 440px;
 .asset-details-container {
     height: $asset-details-height;
     padding: $search-header-vpadding $search-header-hpadding;
-    
+
     background-color: #444;
     background-blend-mode: multiply;
     background-image: url('../../images/background.jpg');
     color: $light-grey;
-    
+
     .asset-details-header {
         display: flex;
         justify-content: space-between;
@@ -21,7 +21,7 @@ $asset-details-height: 440px;
         display: flex;
         justify-content: space-between;
         margin-top: 38px;
-        
+
         .asset-info {
             width: 550px;
 
@@ -59,7 +59,7 @@ $asset-details-height: 440px;
             .year {
                 margin-right: 30px;
             }
-            
+
         }
 
         .poster {

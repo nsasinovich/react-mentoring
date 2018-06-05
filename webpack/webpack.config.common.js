@@ -8,7 +8,8 @@ module.exports = {
 
     output: {
         filename: 'js/[name].js',
-        path: path.resolve('./public'),
+        path: path.resolve(`${__dirname}/public`),
+        publicPath: '/',
     },
 
     resolve: {
@@ -22,7 +23,6 @@ module.exports = {
                 exclude: /node_modules/,
                 use: ['babel-loader'],
             },
-
             {
                 test: /\.(ttf|eot|svg|woff|png|jpg)$/,
                 loader: 'file-loader',

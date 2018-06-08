@@ -67,6 +67,7 @@ class AssetDetails extends React.Component {
 
 AssetDetails.propTypes = {
     asset: PropTypes.object,
+    match: PropTypes.object,
     onSearchButtonClick: PropTypes.func,
     fetchAssetDetails: PropTypes.func,
 };

@@ -62,6 +62,8 @@ class App extends React.Component {
 
 App.propTypes = {
     children: PropTypes.element,
+    location: PropTypes.object.isRequired,
+    store: PropTypes.object.isRequired,
 };
 
 export default hot(module)(App);

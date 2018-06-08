@@ -21,7 +21,7 @@ module.exports = {
             {
                 test: /\.(jsx|js)?$/,
                 exclude: /node_modules/,
-                use: ['babel-loader'],
+                use: ['babel-loader', 'eslint-loader'],
             },
             {
                 test: /\.(ttf|eot|svg|woff|png|jpg)$/,

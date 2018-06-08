@@ -9,17 +9,19 @@
         "jest": true
     },
     "rules": {
-        "indent": ["error", 4, { "SwitchCase": 1 }],
-        "react/jsx-uses-vars": ["error"],
-        "import/newline-after-import": ["error", { "count": 1 }],
         "class-methods-use-this": 0,
+        "indent": ["error", 4, { "SwitchCase": 1 }],
+        "import/newline-after-import": ["error", { "count": 1 }],
+        "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
         "import/prefer-default-export": "off",
+        "react/jsx-uses-vars": ["error"],
+        "react/prop-types": [1, { "ignore":["Router", "context"] }],
         "quotes": [1, "single"]
     },
     "extends": [
-        "airbnb-base",
         "plugin:react/recommended",
-        "plugin:import/react"
+        "plugin:import/react",
+        "airbnb-base"
     ],
     "settings": {
         "import/resolver": {

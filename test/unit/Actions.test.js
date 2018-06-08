@@ -91,7 +91,7 @@ describe('Actions', () => {
         const store = mockStore(INITIAL_STATE);
 
         fetchMock.getOnce(
-            `http://react-cdp-api.herokuapp.com/movies?search=test&searchBy=${FilterOptions.TITLE}`, 
+            `http://react-cdp-api.herokuapp.com/movies?search=test&searchBy=${FilterOptions.TITLE}`,
             mockResults,
         );
 
@@ -114,7 +114,7 @@ describe('Actions', () => {
         const store = mockStore(INITIAL_STATE);
 
         fetchMock.getOnce(
-            `http://react-cdp-api.herokuapp.com/movies?search=test&searchBy=${FilterOptions.TITLE}`, 
+            `http://react-cdp-api.herokuapp.com/movies?search=test&searchBy=${FilterOptions.TITLE}`,
             () => { throw new Error('Error'); },
         );
 

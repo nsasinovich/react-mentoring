@@ -1,17 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+// @flow
+import * as React from 'react';
 
 import './button.scss';
 
-const Button = ({ buttonClass, onClick, children }) => (
-    <button className={`button ${buttonClass}`} onClick={onClick}>{children}</button>
-);
+type Props = {
+    buttonClass: string,
+    children: any,
+    onClick: Function,
+}
 
-Button.propTypes = {
-    buttonClass: PropTypes.string,
-    children: PropTypes.string,
-    onClick: PropTypes.func,
-};
+const Button = (props: Props) => (
+    <button className={`button ${props.buttonClass}`} onClick={props.onClick}>
+        {props.children}
+    </button>
+);
 
 Button.defaultProps = {
     buttonClass: '',

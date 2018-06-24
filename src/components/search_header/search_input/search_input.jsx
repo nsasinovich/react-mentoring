@@ -1,5 +1,6 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
+import type { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { updateSearchInput } from '../../../actions/actions';
 import arrowIcon from '../../../images/arrow.png';
@@ -8,31 +9,35 @@ import './search_input.scss';
 
 const INPUT_PLACEHOLDER = 'Let\'s find your movie';
 
-const SearchInput = ({ searchInput, updateSearchInputValue, onEnterKey }) => (
+type StateProps = {
+    searchInput: string,
+};
+
+type DispatchProps = {
+    updateSearchInputValue: Function,
+    onEnterKey: Function,
+}
+
+type Props = StateProps & DispatchProps;
+
+const SearchInput = (props: Props) => (
     <div className="search-input-wrapper">
         <input
             className="search-input"
-            value={searchInput}
+            value={props.searchInput}
             placeholder={INPUT_PLACEHOLDER}
-            onChange={event => updateSearchInputValue(event.target.value)}
-            onKeyPress={event => event.key === 'Enter' && onEnterKey()}
+            onChange={event => props.updateSearchInputValue(event.target.value)}
+            onKeyPress={event => event.key === 'Enter' && props.onEnterKey()}
         />
         <img src={arrowIcon} />
     </div>
 );
 
-SearchInput.propTypes = {
-    searchInput: PropTypes.string,
-    updateSearchInputValue: PropTypes.func,
-    onEnterKey: PropTypes.func,
-
-};
-
-const mapStateToProps = state => ({
+const mapStateToProps = (state): StateProps => ({
     searchInput: state.searchInput,
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch: Dispatch<*>) => ({
     updateSearchInputValue: input => dispatch(updateSearchInput(input)),
 });
 

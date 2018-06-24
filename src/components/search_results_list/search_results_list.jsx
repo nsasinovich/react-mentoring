@@ -1,5 +1,5 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import AssetTile from '../asset_tile/asset_tile';
 import NoResults from '../no_results/no_results';
@@ -7,7 +7,13 @@ import SearchResultsErrorBoundary from './search_results_error_boundary/search_r
 
 import './search_results_list.scss';
 
-const SearchResultsList = ({ results, sortField }) => {
+type Props = {
+    results: Array<Object>,
+    sortField: string,
+}
+
+const SearchResultsList = (props: Props) => {
+    const { results, sortField } = props;
     const formattedResults = results.map((res) => {
         res.year = new Date(res.release_date).getUTCFullYear();
         return res;
@@ -28,11 +34,6 @@ const SearchResultsList = ({ results, sortField }) => {
             </div>
         </SearchResultsErrorBoundary>
     );
-};
-
-SearchResultsList.propTypes = {
-    results: PropTypes.array,
-    sortField: PropTypes.string.isRequired,
 };
 
 SearchResultsList.defaultProps = {

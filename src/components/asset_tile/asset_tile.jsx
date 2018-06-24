@@ -1,5 +1,5 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setSelectedMovie } from '../../actions/actions';
@@ -8,7 +8,19 @@ import Poster from '../../components/shared/poster/poster';
 
 import './asset_tile.scss';
 
-const AssetTile = (props) => {
+type Props = {
+    asset: {
+        release_date: string,
+        poster_path: string,
+        title: string,
+        genres: Array<string>,
+        id: number,
+    },
+    setMovieDetails: Function,
+};
+
+
+const AssetTile = (props: Props) => {
     const {
         asset,
         setMovieDetails,
@@ -35,12 +47,6 @@ const AssetTile = (props) => {
             {info}
         </div>
     );
-};
-
-
-AssetTile.propTypes = {
-    asset: PropTypes.object,
-    setMovieDetails: PropTypes.func,
 };
 
 const mapDispatchToProps = {

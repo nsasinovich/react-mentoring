@@ -3,3 +3,4 @@
 /test/coverage
 /test/e2e-reports
 .DS_Store
+*.scss.flow

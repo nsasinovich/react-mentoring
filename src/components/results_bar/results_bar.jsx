@@ -1,13 +1,25 @@
+// @flow
 import React from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SortingOptions } from '../../constants/app_constants';
 
 import './results_bar.scss';
 import { changeSort } from '../../actions/actions';
 
-const ResultsBar = ({ count, selectedSortName, changeCurrentSort }) => {
+type StateProps = {
+    count: number,
+    selectedSortName: string,
+}
+
+type DispatchProps = {
+    changeCurrentSort: Function
+}
+
+type Props = StateProps & DispatchProps;
+
+const ResultsBar = (props: Props) => {
+    const { count, selectedSortName, changeCurrentSort } = props;
     const resultsFoundMessage = `${count} movies found`;
 
     const sortingOptions = Object.values(SortingOptions).map((sort) => {
@@ -32,12 +44,6 @@ const ResultsBar = ({ count, selectedSortName, changeCurrentSort }) => {
             </div>
         </div>
     );
-};
-
-ResultsBar.propTypes = {
-    count: PropTypes.number,
-    selectedSortName: PropTypes.string,
-    changeCurrentSort: PropTypes.func,
 };
 
 ResultsBar.defaultProps = {

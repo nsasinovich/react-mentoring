@@ -1,10 +1,17 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
-
 import './search_results_error_boundary.scss';
 
-export default class SearchResultsErrorBoundary extends React.Component {
-    constructor(props) {
+type Props = {
+    children: any,
+}
+
+type State = {
+    hasError: boolean,
+  };
+
+export default class SearchResultsErrorBoundary extends React.Component<Props, State> {
+    constructor(props: any) {
         super(props);
         this.state = { hasError: false };
     }
@@ -20,7 +27,3 @@ export default class SearchResultsErrorBoundary extends React.Component {
         return this.props.children;
     }
 }
-
-SearchResultsErrorBoundary.propTypes = {
-    children: PropTypes.element.isRequired,
-};

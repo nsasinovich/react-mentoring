@@ -1,5 +1,5 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
@@ -11,7 +11,27 @@ import { PosterSizes } from '../../constants/app_constants';
 
 import './asset_details.scss';
 
-class AssetDetails extends React.Component {
+type Props = {
+    asset: {
+        release_date: string,
+        poster_path: string,
+        title: string,
+        runtime: string,
+        overview: string,
+        vote_average: number,
+        genres: Array<string>,
+        id: number,
+    },
+    match: {
+        params: {
+            assetId: number
+        }
+    },
+    onSearchButtonClick: Function,
+    fetchAssetDetails: Function,
+}
+
+class AssetDetails extends React.Component<Props> {
     componentWillMount() {
         const { assetId } = this.props.match.params;
         if (this.props.asset.id !== assetId) {
@@ -65,17 +85,6 @@ class AssetDetails extends React.Component {
     }
 }
 
-AssetDetails.propTypes = {
-    asset: PropTypes.object,
-    match: PropTypes.object,
-    onSearchButtonClick: PropTypes.func,
-    fetchAssetDetails: PropTypes.func,
-};
-
-AssetDetails.defaultProps = {
-    asset: {},
-};
-
 const mapDispatchToProps = {
     onSearchButtonClick: resetSelectedMovie,
     fetchAssetDetails: fetchMovieById,
@@ -85,5 +94,8 @@ const mapStateToProps = state => ({
     asset: state.selectedMovieDetails,
 });
 
+AssetDetails.defaultProps = {
+    asset: {},
+};
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AssetDetails));

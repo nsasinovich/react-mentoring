@@ -1,19 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+// @flow
+import * as React from 'react';
 import ResultsBar from '../results_bar/results_bar';
 import SearchResultsList from '../search_results_list/search_results_list';
 
-const SearchContainer = ({ children }) => (
+type Props = {
+    children?: React.Node,
+};
+
+const SearchContainer = (props: Props) => (
     <div className="search-container">
-        {children}
+        {props.children}
         <ResultsBar />
         <SearchResultsList />
     </div>
 );
-
-SearchContainer.propTypes = {
-    children: PropTypes.element.isRequired,
-};
 
 export default SearchContainer;
 

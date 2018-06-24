@@ -1,5 +1,5 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import classNames from 'classnames';
@@ -15,7 +15,20 @@ const FIND_MOVIE_MESSAGE = 'Find your movie';
 const SEARCH_BUTTON_MESSAGE = 'Search';
 const SEARCH_BY_MESSAGE = 'Search by';
 
-class SearchHeader extends React.Component {
+type Props = {
+    searchInput: string,
+    selectedFilter: string,
+    selectedSort: Object,
+    fetchSearchResults: Function,
+    changeCurrentFilter: Function,
+    updateSearchInputValue: Function,
+    history: Object,
+    location: {
+        search: string
+    },
+}
+
+class SearchHeader extends React.Component<Props> {
     componentWillMount() {
         const params = new URLSearchParams(this.props.location.search);
 
@@ -78,17 +91,6 @@ class SearchHeader extends React.Component {
         );
     }
 }
-
-SearchHeader.propTypes = {
-    searchInput: PropTypes.string,
-    selectedFilter: PropTypes.string,
-    selectedSort: PropTypes.object,
-    fetchSearchResults: PropTypes.func,
-    changeCurrentFilter: PropTypes.func,
-    updateSearchInputValue: PropTypes.func,
-    history: PropTypes.object,
-    location: PropTypes.object,
-};
 
 const mapStateToProps = state => ({
     searchInput: state.searchInput,

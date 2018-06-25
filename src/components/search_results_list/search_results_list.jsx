@@ -3,6 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import AssetTile from '../asset_tile/asset_tile';
 import NoResults from '../no_results/no_results';
+import { selectResults, selectActiveSortField } from '../../selectors/app_selectors';
 import SearchResultsErrorBoundary from './search_results_error_boundary/search_results_error_boundary';
 
 import './search_results_list.scss';
@@ -41,8 +42,8 @@ SearchResultsList.defaultProps = {
 };
 
 const mapStateToProps = state => ({
-    results: state.results,
-    sortField: state.selectedSort.sortField,
+    results: selectResults(state),
+    sortField: selectActiveSortField(state),
 });
 
 export default connect(mapStateToProps)(SearchResultsList);

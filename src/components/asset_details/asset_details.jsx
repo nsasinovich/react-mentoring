@@ -7,6 +7,7 @@ import Poster from '../shared/poster/poster';
 import Logo from '../shared/logo/logo';
 import Button from '../shared/button/button';
 import { resetSelectedMovie, fetchMovieById } from '../../actions/actions';
+import { selectMovieDetails } from '../../selectors/app_selectors';
 import { PosterSizes } from '../../constants/app_constants';
 
 import './asset_details.scss';
@@ -91,7 +92,7 @@ const mapDispatchToProps = {
 };
 
 const mapStateToProps = state => ({
-    asset: state.selectedMovieDetails,
+    asset: selectMovieDetails(state),
 });
 
 AssetDetails.defaultProps = {

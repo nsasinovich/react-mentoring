@@ -6,6 +6,10 @@ import { SortingOptions } from '../../constants/app_constants';
 
 import './results_bar.scss';
 import { changeSort } from '../../actions/actions';
+import {
+    selectResultsCount,
+    selectActiveSortName,
+} from '../../selectors/app_selectors';
 
 type StateProps = {
     count: number,
@@ -51,8 +55,8 @@ ResultsBar.defaultProps = {
 };
 
 const mapStateToProps = state => ({
-    count: state.resultsCount,
-    selectedSortName: state.selectedSort.name,
+    count: selectResultsCount(state),
+    selectedSortName: selectActiveSortName(state),
 });
 
 const mapDispatchToProps = {

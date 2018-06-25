@@ -3,7 +3,7 @@
 .asset-tile {
     display: inline-flex;
     flex-direction: column;
-    
+
     .asset-info {
         max-width: 200px;
         padding-top: 10px;
@@ -24,24 +24,28 @@
             text-transform: uppercase;
             color: $dark-grey;
             font-size: 12px;
+
+            p {
+                margin: 0;
+            }
         }
 
         .title:hover {
             color: $red;
         }
-        
+
         .genre {
             margin-top: 4px;
             font-size: 10px;
         }
-        
+
         .year {
             margin-left: 8px;
             padding: 2px 4px;
             border: 1px solid $black;
-            border-radius: 1px; 
+            border-radius: 1px;
             font-size: 10px;
         }
     }
-} 
+}
 

@@ -6,7 +6,16 @@ import classNames from 'classnames';
 import Logo from '../shared/logo/logo';
 import SearchInput from './search_input/search_input';
 import Button from '../../components/shared/button/button';
-import { fetchResults, changeFilter, updateSearchInput } from '../../actions/actions';
+import {
+    fetchResults,
+    changeFilter,
+    updateSearchInput,
+} from '../../actions/actions';
+import {
+    selectSearchInput,
+    selectActiveSort,
+    selectActiveFilter,
+} from '../../selectors/app_selectors';
 import { FilterOptions } from '../../constants/app_constants';
 
 import './search_header.scss';
@@ -93,9 +102,9 @@ class SearchHeader extends React.Component<Props> {
 }
 
 const mapStateToProps = state => ({
-    searchInput: state.searchInput,
-    selectedFilter: state.selectedFilter,
-    selectedSort: state.selectedSort,
+    searchInput: selectSearchInput(state),
+    selectedFilter: selectActiveFilter(state),
+    selectedSort: selectActiveSort(state),
 });
 
 const mapDispatchToProps = {

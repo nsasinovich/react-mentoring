@@ -3,6 +3,7 @@ import React from 'react';
 import type { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { updateSearchInput } from '../../../actions/actions';
+import { selectSearchInput } from '../../../selectors/app_selectors';
 import arrowIcon from '../../../images/arrow.png';
 
 import './search_input.scss';
@@ -34,7 +35,7 @@ const SearchInput = (props: Props) => (
 );
 
 const mapStateToProps = (state): StateProps => ({
-    searchInput: state.searchInput,
+    searchInput: selectSearchInput(state),
 });
 
 const mapDispatchToProps = (dispatch: Dispatch<*>) => ({

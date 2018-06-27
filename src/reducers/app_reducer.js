@@ -1,33 +1,23 @@
+import { fromJS } from 'immutable';
 import ActionTypes from '../constants/action_types';
 import { INITIAL_STATE } from '../constants/app_constants';
 
 const appReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case ActionTypes.CHANGE_SORT:
-            return Object.assign({}, state, {
-                selectedSort: action.sort,
-            });
+            return state.set('selectedSort', action.sort);
         case ActionTypes.CHANGE_FILTER:
-            return Object.assign({}, state, {
-                selectedFilter: action.filter,
-            });
+            return state.set('selectedFilter', action.filter);
         case ActionTypes.UPDATE_SEARCH_INPUT:
-            return Object.assign({}, state, {
-                searchInput: action.input,
-            });
+            return state.set('searchInput', action.input);
         case ActionTypes.UPDATE_SEARCH_RESULTS:
-            return Object.assign({}, state, {
-                results: action.results.data,
-                resultsCount: action.results.total,
-            });
+            return state
+                .set('results', fromJS(action.results.data))
+                .set('resultsCount', action.results.total);
         case ActionTypes.SET_SELECTED_MOVIE:
-            return Object.assign({}, state, {
-                selectedMovieDetails: action.movie,
-            });
+            return state.set('selectedMovieDetails', fromJS(action.movie));
         case ActionTypes.RESET_SELECTED_MOVIE:
-            return Object.assign({}, state, {
-                selectedMovieDetails: null,
-            });
+            return state.set('selectedMovieDetails', null);
         default:
             return state;
     }

@@ -26,16 +26,16 @@ const AssetTile = (props: Props) => {
         setMovieDetails,
     } = props;
 
-    const year = new Date(asset.release_date).getUTCFullYear();
-    const poster = <Poster posterSize={PosterSizes.MEDIUM} imgUrl={asset.poster_path} />;
+    const year = new Date(asset.get('release_date')).getUTCFullYear();
+    const poster = <Poster posterSize={PosterSizes.MEDIUM} imgUrl={asset.get('poster_path')} />;
 
     const info = (
         <div className="asset-info">
             <div>
-                <Link className="title" to={`/details/${asset.id}`}>
-                    <p onClick={() => setMovieDetails(asset)}>{asset.title}</p>
+                <Link className="title" to={`/details/${asset.get('id')}`}>
+                    <p onClick={() => setMovieDetails(asset)}>{asset.get('title')}</p>
                 </Link>
-                <p className="genre">{asset.genres[0]}</p>
+                <p className="genre">{asset.getIn(['genres', 0])}</p>
             </div>
             <p className="year">{year}</p>
         </div>

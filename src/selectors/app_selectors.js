@@ -1,42 +1,38 @@
 import { createSelector } from 'reselect';
+import { SortingOptions } from '../constants/app_constants';
 
 export const selectMovieDetails = createSelector(
-    state => state.selectedMovieDetails,
+    state => state.get('selectedMovieDetails'),
     movieDetails => movieDetails,
 );
 
 
 export const selectResultsCount = createSelector(
-    state => state.resultsCount,
+    state => state.get('resultsCount'),
     resultsCount => resultsCount,
 );
 
 export const selectActiveFilter = createSelector(
-    state => state.selectedFilter,
+    state => state.get('selectedFilter'),
     selectedFilter => selectedFilter,
 );
 
 export const selectActiveSort = createSelector(
-    state => state.selectedSort,
+    state => state.get('selectedSort'),
     selectedSort => selectedSort,
 );
 
-export const selectActiveSortName = createSelector(
-    selectActiveSort,
-    selectedSort => selectedSort.name,
-);
-
 export const selectSearchInput = createSelector(
-    state => state.searchInput,
+    state => state.get('searchInput'),
     input => input,
 );
 
 export const selectResults = createSelector(
-    state => state.results,
+    state => state.get('results'),
     results => results,
 );
 
 export const selectActiveSortField = createSelector(
     selectActiveSort,
-    selectedSort => selectedSort.sortField,
+    selectedSort => SortingOptions[selectedSort].sortField,
 );

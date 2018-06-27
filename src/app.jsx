@@ -62,7 +62,7 @@ class App extends React.Component {
 
 App.propTypes = {
     children: PropTypes.element,
-    location: PropTypes.object.isRequired,
+    location: PropTypes.object,
     store: PropTypes.object.isRequired,
 };
 

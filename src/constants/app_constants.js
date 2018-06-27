@@ -1,3 +1,5 @@
+import { fromJS } from 'immutable';
+
 export const ENDPOINT = 'http://react-cdp-api.herokuapp.com';
 
 export const PosterSizes = {
@@ -10,22 +12,27 @@ export const FilterOptions = {
     TITLE: 'title',
 };
 
+export const SortNames = {
+    RELEASE: 'RELEASE',
+    RATING: 'RATING',
+};
+
 export const SortingOptions = {
-    RELEASE: {
+    [SortNames.RELEASE]: {
         name: 'release date',
         sortField: 'year',
     },
-    RATING: {
+    [SortNames.RATING]: {
         name: 'rating',
         sortField: 'vote_count',
     },
 };
 
-export const INITIAL_STATE = {
+export const INITIAL_STATE = fromJS({
     results: [],
     resultsCount: 0,
     searchInput: '',
-    selectedSort: SortingOptions.RATING,
+    selectedSort: SortNames.RATING,
     selectedFilter: FilterOptions.TITLE,
     selectedMovieDetails: {},
-};
+});

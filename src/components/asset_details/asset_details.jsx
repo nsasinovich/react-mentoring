@@ -3,6 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
+import { Map } from 'immutable';
 import Poster from '../shared/poster/poster';
 import Logo from '../shared/logo/logo';
 import Button from '../shared/button/button';
@@ -42,9 +43,11 @@ class AssetDetails extends React.Component<Props> {
 
     render() {
         const { asset, onSearchButtonClick } = this.props;
-        const year = asset.release_date && new Date(asset.release_date).getUTCFullYear();
-        const runtime = asset.runtime ? `${asset.runtime} min` : null;
-        const genres = asset.genres && asset.genres.join(', ');
+
+        const releaseDate = asset.get('release_date');
+        const year = releaseDate && new Date(releaseDate).getUTCFullYear();
+        const runtime = asset.get('runtime') ? `${asset.get('runtime')} min` : null;
+        const genres = asset.get('genres') && asset.get('genres').join(', ');
 
         const header = (
             <div className="asset-details-header">
@@ -57,12 +60,12 @@ class AssetDetails extends React.Component<Props> {
 
         const info = (
             <div className="asset-details">
-                <Poster posterSize={PosterSizes.LARGE} imgUrl={asset.poster_path} />
+                <Poster posterSize={PosterSizes.LARGE} imgUrl={asset.get('poster_path')} />
 
                 <div className="asset-info">
                     <div className="wrapper">
-                        <p className="title">{asset.title}</p>
-                        <p className="rating">{asset.vote_average}</p>
+                        <p className="title">{asset.get('title')}</p>
+                        <p className="rating">{asset.get('vote_average')}</p>
                     </div>
 
                     <p className="genre">{genres}</p>
@@ -72,7 +75,7 @@ class AssetDetails extends React.Component<Props> {
                         <p className="duration">{runtime}</p>
                     </div>
 
-                    <p className="description">{asset.overview}</p>
+                    <p className="description">{asset.get('overview')}</p>
                 </div>
             </div>
         );
@@ -96,7 +99,7 @@ const mapStateToProps = state => ({
 });
 
 AssetDetails.defaultProps = {
-    asset: {},
+    asset: Map(),
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AssetDetails));

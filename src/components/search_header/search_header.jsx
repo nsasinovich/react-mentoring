@@ -13,7 +13,6 @@ import {
 } from '../../actions/actions';
 import {
     selectSearchInput,
-    selectActiveSort,
     selectActiveFilter,
 } from '../../selectors/app_selectors';
 import { FilterOptions } from '../../constants/app_constants';
@@ -27,7 +26,6 @@ const SEARCH_BY_MESSAGE = 'Search by';
 type Props = {
     searchInput: string,
     selectedFilter: string,
-    selectedSort: Object,
     fetchSearchResults: Function,
     changeCurrentFilter: Function,
     updateSearchInputValue: Function,
@@ -51,14 +49,13 @@ class SearchHeader extends React.Component<Props> {
     render() {
         const {
             searchInput,
-            selectedSort,
             selectedFilter,
             fetchSearchResults,
         } = this.props;
 
         const doSearch = () => {
             this.props.history.push(`/search?search=${searchInput}&searchBy=${selectedFilter}`);
-            fetchSearchResults({ searchInput, selectedFilter, selectedSort });
+            fetchSearchResults({ searchInput, selectedFilter });
         };
 
         const filterOptions = Object.values(FilterOptions).map((filter) => {
@@ -104,7 +101,6 @@ class SearchHeader extends React.Component<Props> {
 const mapStateToProps = state => ({
     searchInput: selectSearchInput(state),
     selectedFilter: selectActiveFilter(state),
-    selectedSort: selectActiveSort(state),
 });
 
 const mapDispatchToProps = {

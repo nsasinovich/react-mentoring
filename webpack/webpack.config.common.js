@@ -16,6 +16,8 @@ module.exports = {
         extensions: ['.js', '.jsx'],
     },
 
+    devtool: isDevMod ? 'source-map' : '',
+
     module: {
         rules: [
             {
